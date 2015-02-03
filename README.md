@@ -17,6 +17,10 @@ Get started with FireShell:
 2. Clone the git repo — `git clone
    https://github.com/toddmotto/fireshell.git`
 
+## Application notes
+
+* Contact modal - http://codyhouse.co/demo/morphing-modal-window/index.html#0
+
 ## Platform support
 
 FireShell runs on both Mac OS X, Linux and Windows. Automated command-line scripts are only supported on Mac OS X and Windows.
