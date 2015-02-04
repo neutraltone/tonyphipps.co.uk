@@ -21,6 +21,17 @@ Get started with FireShell:
 
 * Contact modal - http://codyhouse.co/demo/morphing-modal-window/index.html#0
 
+### Animation notes
+
+* Loop time
+* Min display time
+* Max display time
+* Show
+* Hide
+* Scale
+* Reveal (top to bottom + bottom to top)
+* Glitch (http://css-tricks.com/glitch-effect-text-images-svg/)
+
 ## Platform support
 
 FireShell runs on both Mac OS X, Linux and Windows. Automated command-line scripts are only supported on Mac OS X and Windows.
