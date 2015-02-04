@@ -4,6 +4,13 @@
   text-rendering:optimizeLegibility;
   @include vendor(box-sizing, border-box);
 }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
 html {
   font-size:62.5%;
 }
@@ -11,4 +18,6 @@ body {
   font:300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
   background:#fff;
   color:#444;
+  background: url($background-image) center center no-repeat;
+  background-size: cover;
 }
