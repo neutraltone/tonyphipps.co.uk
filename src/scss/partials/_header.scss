@@ -2,11 +2,13 @@
 
 }
 .logo {
-  margin: -64px 0 0 -64px;
+  margin: (-$logo-size--half) 0 0 (-$logo-size--half);
 
   @include position(absolute, 50% 0 0 50%);
 
   img {
     display: block;
+    width: $logo-size;
+    height: $logo-size;
   }
 }
