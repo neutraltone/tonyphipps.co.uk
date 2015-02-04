@@ -158,6 +158,20 @@ module.exports = function (grunt) {
     },
 
     /**
+    * Compiles SVG files in SVG sprite
+    */
+    svgstore: {
+      options: {
+        prefix : 'icon-', // This will prefix each <g> ID
+      },
+      default : {
+        files: {
+          '<%= project.assets %>/svg/sprite.svg': ['<%= project.src %>/svg/*.svg']
+        }
+      }
+    },
+
+    /**
      * Opens the web server in the browser
      * https://github.com/jsoverson/grunt-open
      */
@@ -182,6 +196,10 @@ module.exports = function (grunt) {
         files: '<%= project.src %>/scss/{,*/}*.{scss,sass}',
         tasks: ['sass:dev']
       },
+      svgstore: {
+        files: '<%= project.src %>/svg/*.svg',
+        tasks: ['svgstore']
+      },
       livereload: {
         options: {
           livereload: LIVERELOAD_PORT
@@ -204,6 +222,7 @@ module.exports = function (grunt) {
     'sass:dev',
     'jshint',
     'concat:dev',
+    'svgstore',
     'connect:livereload',
     'open',
     'watch'
