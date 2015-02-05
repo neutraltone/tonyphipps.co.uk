@@ -19,7 +19,10 @@ Get started with FireShell:
 
 ## Application notes
 
+### TODO
+
 * Contact modal - http://codyhouse.co/demo/morphing-modal-window/index.html#0
+* Repplace grunt-svgstore with Grunt icon - http://www.grunticon.com/
 
 ### Animation notes
 
