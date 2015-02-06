@@ -158,15 +158,6 @@ module.exports = function (grunt) {
     },
 
     /**
-     * Applies prefixes to required styles
-     */
-    autoprefixer: {
-      options: {
-        browsers: ['last 2 versions', 'ie 8', 'ie 9']
-      }
-    },
-
-    /**
     * Compiles SVG files in SVG sprite
     */
     svgstore: {
