@@ -22,7 +22,8 @@ Get started with FireShell:
 ### TODO
 
 * Contact modal - http://codyhouse.co/demo/morphing-modal-window/index.html#0
-* Repplace grunt-svgstore with Grunt icon - http://www.grunticon.com/
+* Replace grunt-svgstore with Grunt icon - http://www.grunticon.com/
+* jQuery Easing for slide out animation - http://easings.net/#easeOutBounce
 
 ### Animation notes
 
