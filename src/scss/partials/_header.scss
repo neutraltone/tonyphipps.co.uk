@@ -9,9 +9,6 @@
   background-size: 100%, auto;
   box-shadow: 0 6px 15px -6px rgba(0,0,0,.7);
 
-  // Enable hardware acceleration
-  -webkit-transform: translate3d(0px, 0px, 0px) !important;
-
   &--loaded {
     //background-size: auto, auto;
   }
