@@ -1,0 +1,35 @@
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+  .main {
+    padding: 8rem 4rem;
+    //background: rgba(0,0,0,.3);
+  }
+  .primary-content {
+    padding: 8rem 4rem;
+
+    h1 {
+      font-size: 2.7rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+    }
+  }
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+
+}
