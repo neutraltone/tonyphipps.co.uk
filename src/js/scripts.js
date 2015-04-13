@@ -3,7 +3,9 @@
   'use strict';
 
   $(function () {
-    // FireShell
+    $(window).load(function() {
+      $('.loading').fadeOut();
+    });
   });
 
 })(jQuery, window, document);

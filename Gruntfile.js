@@ -45,6 +45,7 @@ module.exports = function (grunt) {
         '<%= project.src %>/scss/style.scss'
       ],
       js: [
+        '<%= project.src %>/js/plugins/*.js',
         '<%= project.src %>/js/*.js'
       ]
     },
