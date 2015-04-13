@@ -3,15 +3,9 @@
   'use strict';
 
   $(function () {
-
-    // Bounce out header div
-    $('.logo').on('click', function(e){
-      e.preventDefault();
-
-      //$('.header').addClass('header--loaded');
-      $('.header').slideUp(1750, 'easeOutBounce');
+    $(window).load(function() {
+      $('.loading').fadeOut();
     });
-
   });
 
 })(jQuery, window, document);

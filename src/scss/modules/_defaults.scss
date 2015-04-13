@@ -19,8 +19,15 @@ html {
 }
 
 body {
-  font:300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
+  font:300 13px/1.4 'Helvetica Neue', Helvetica, Arial;
   background: url($background-image--body) #000 top center no-repeat;
   background-size: cover;
   color:#444;
+}
+
+a {
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px dashed #fff;
 }
