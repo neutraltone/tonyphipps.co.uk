@@ -1,3 +1,10 @@
+.logo {
+  display: block;
+  margin: 2rem 0;
+  width: $logo-size;
+  height: $logo-size;
+}
+
 .primary-content {
   position: absolute;
   bottom: 0;
@@ -15,11 +22,13 @@
   }
 }
 
-.logo {
-  display: block;
-  margin: 2rem 0;
-  width: $logo-size;
-  height: $logo-size;
+.social {
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: inline-block
+  }
 }
 
 .loading {
