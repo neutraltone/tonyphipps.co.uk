@@ -27,7 +27,9 @@
   list-style: none;
 
   &__item {
-    display: inline-block
+    display: inline-block;
+    width: 42px;
+    height: 42px;
   }
 }
 
