@@ -28,8 +28,13 @@
 
   &__item {
     display: inline-block;
+    margin: 0 .5rem;
     width: 42px;
     height: 42px;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }
 
