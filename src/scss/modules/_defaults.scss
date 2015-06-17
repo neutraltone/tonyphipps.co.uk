@@ -30,4 +30,9 @@ a {
   text-decoration: none;
   color: #fff;
   border-bottom: 1px dashed #fff;
+
+  &:hover {
+    color: $brand-colour__secondary;
+    border-bottom-color: $brand-colour__secondary;
+  }
 }

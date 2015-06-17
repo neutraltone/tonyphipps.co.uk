@@ -1,7 +1,22 @@
 // Backgrounds
 $background-image--body: '/assets/img/background--body.jpg';
-$background-image--header: '/assets/img/background--header.jpg';
 
 // Logo
 $logo-size: 160px;
 $logo-size--half: $logo-size / 2;
+
+// High level base settings
+$base-font-size:         14px;
+$base-line-height:       22px;
+$base-spacing-unit:      24px;
+$base-text-colour:       #fff;
+$base-background-colour: #fff;
+$base-anim-duration:     300ms;
+
+
+// Colour Palette
+$brand-colour__primary:   #bf3a2a;
+$brand-colour__secondary: lighten($brand-colour__primary, 8%);
+
+//$brand-colour__tertiary:   #595657;
+//$brand-colour__quaternary: #908e8f;
