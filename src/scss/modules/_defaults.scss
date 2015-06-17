@@ -31,8 +31,9 @@ a {
   color: #fff;
   border-bottom: 1px dashed #fff;
 
+  @include transition(border-color $base-anim-duration ease-in-out);
+
   &:hover {
-    color: $brand-colour__secondary;
-    border-bottom-color: $brand-colour__secondary;
+    border-bottom-color: rgba(0,0,0,0);
   }
 }

@@ -47,14 +47,14 @@
   &__link {
     position: relative;
     display: block;
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
     border-bottom: none;
     fill: #fff;
     @include transition(fill $base-anim-duration ease-in-out);
 
     &:hover {
-      fill: $brand-colour__secondary;
+      fill: $brand-colour__tertiary;
 
       .social__label {
         display: block;
