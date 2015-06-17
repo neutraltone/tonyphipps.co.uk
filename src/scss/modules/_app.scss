@@ -1,10 +1,26 @@
+/**
+ * Logo
+ */
+
+.logo {
+  display: block;
+  margin: 2rem 0;
+  width: $logo-size;
+  height: $logo-size;
+}
+
+
+/**
+ * Primary Content
+ */
+
 .primary-content {
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 2;
   padding: 3rem 2rem;
-  max-width: 740px;
+  max-width: 680px;
 
   h1 {
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
@@ -15,12 +31,78 @@
   }
 }
 
-.logo {
-  display: block;
-  margin: 2rem 0;
-  width: $logo-size;
-  height: $logo-size;
+
+/**
+ * Social links
+ */
+
+.social {
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-bottom: none;
+    fill: #fff;
+    @include transition(fill $base-anim-duration ease-in-out);
+
+    &:hover {
+      fill: $brand-colour__tertiary;
+
+      .social__label {
+        display: block;
+        color: #fff;
+        -webkit-animation-duration: $base-anim-duration;
+        animation-duration: $base-anim-duration;
+        -webkit-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 50%;
+    display: none;
+    padding: 5px 10px;
+    background: rgba(0,0,0,.5);
+    transform: translate(-50%, 0);
+  }
 }
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -12px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, 0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -12px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+
+/**
+ * Loader
+ */
 
 .loading {
   position: absolute;
@@ -29,7 +111,7 @@
   z-index: 3;
   width: 100%;
   height: 100%;
-  background: #bf3a2a;
+  background: $brand-colour__primary;
 
   &__spinner {
     position: absolute;

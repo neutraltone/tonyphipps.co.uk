@@ -14,6 +14,19 @@
 
     <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
 
+    <script>
+      document.addEventListener('DOMContentLoaded', function (event) {
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", "/assets/svg/sprite.svg", true);
+        ajax.send();
+        ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+        }
+      });
+    </script>
+
   </head>
   <body>
 
@@ -22,6 +35,40 @@
         <img src="/assets/img/logo.svg" width="120" height="120" class="logo" alt="Logo">
         <h1>UX Designer and Frontend Developer</h1>
         <p>Hello. I am Tony Phipps, a UX designer and frontend developer from the United Kingdom. If you would like to work with me, feel free to <a href="mailto:tony.phipps@gmail.com">get in touch</a>.</p>
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link" href="https://github.com/neutraltone">
+              <svg class="icon" viewBox="0 0 48 48">
+                <use xlink:href="#icon-social-github" />
+              </svg>
+              <span class="social__label">Github</span>
+            </a>
+          </li><!--
+       --><li class="social__item">
+            <a class="social__link" href="https://twitter.com/neutraltone">
+              <svg class="icon" viewBox="0 0 48 48">
+                <use xlink:href="#icon-social-twitter" />
+              </svg>
+              <span class="social__label">Twitter</span>
+            </a>
+          </li><!--
+       --><li class="social__item">
+            <a class="social__link" href="https://instagram.com/neutraltone/">
+              <svg class="icon" viewBox="0 0 48 48">
+                <use xlink:href="#icon-social-instagram" />
+              </svg>
+              <span class="social__label">Instagram</span>
+            </a>
+          </li><!--
+       --><li class="social__item">
+            <a class="social__link" href="https://500px.com/NeutralTone">
+              <svg class="icon" viewBox="0 0 48 48">
+                <use xlink:href="#icon-social-500px" />
+              </svg>
+              <span class="social__label">500px</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </main>
 
