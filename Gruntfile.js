@@ -163,7 +163,10 @@ module.exports = function (grunt) {
     */
     svgstore: {
       options: {
-        prefix : 'icon-', // This will prefix each <g> ID
+        prefix : 'icon-',
+        svg: {
+          style: 'display: none;'
+        },
       },
       default : {
         files: {
