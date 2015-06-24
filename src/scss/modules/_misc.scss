@@ -1,15 +1,15 @@
 ::selection{
-  background:#333;
-  color:#fff;
+  background: $selection-colour__background;
+  color: $selection-colour__color;
   text-shadow:none;
 }
 ::-moz-selection{
-  background:#333;
-  color:#fff;
+  background: $selection-colour__background;
+  color: $selection-colour__color;
   text-shadow:none;
 }
 ::-webkit-selection{
-  background:#333;
-  color:#fff;
+  background: $selection-colour__background;
+  color: $selection-colour__color;
   text-shadow:none;
 }

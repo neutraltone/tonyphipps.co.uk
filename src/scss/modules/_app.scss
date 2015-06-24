@@ -24,10 +24,12 @@
 
   h1 {
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+    font-weight: 700;
   }
 
   p {
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+    font-weight: 300;
   }
 }
 
@@ -54,7 +56,7 @@
     @include transition(fill $base-anim-duration ease-in-out);
 
     &:hover {
-      fill: $brand-colour__tertiary;
+      fill: $brand-colour__primary;
 
       .social__label {
         display: block;
