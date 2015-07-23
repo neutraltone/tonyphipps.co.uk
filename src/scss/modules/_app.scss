@@ -5,8 +5,8 @@
 .logo {
   display: block;
   margin: 2rem 0;
-  width: $logo-size;
-  height: $logo-size;
+  width: ($logo-size) / 1.80;
+  height: ($logo-size) / 1.80;
 }
 
 
@@ -29,6 +29,7 @@
 
   p {
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+    font-size: 1.6rem;
     font-weight: 300;
   }
 }
@@ -39,6 +40,7 @@
  */
 
 .social {
+  margin-bottom: 0;
   padding: 0;
   list-style: none;
 
@@ -55,11 +57,12 @@
     fill: #fff;
     @include transition(fill $base-anim-duration ease-in-out);
 
-    &:hover {
+    &:hover,
+    &:focus {
       fill: $brand-colour__primary;
 
       .social__label {
-        display: block;
+        display: none;
         color: #fff;
         -webkit-animation-duration: $base-anim-duration;
         animation-duration: $base-anim-duration;
@@ -76,6 +79,7 @@
     padding: 5px 10px;
     background: rgba(0,0,0,.5);
     transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
   }
 }
 
