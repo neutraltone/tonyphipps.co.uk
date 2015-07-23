@@ -2,12 +2,14 @@
 
 }
 @media only screen and (min-width:480px) {
-
+  .logo {
+    width: ($logo-size) / 1.25;
+    height: ($logo-size) / 1.25;
+  }
 }
 @media only screen and (min-width:768px) {
   .main {
     padding: 8rem 4rem;
-    //background: rgba(0,0,0,.3);
   }
   .primary-content {
     padding: 8rem 4rem;
@@ -18,6 +20,18 @@
 
     p {
       font-size: 1.8rem;
+    }
+  }
+  .logo {
+    width: $logo-size;
+    height: $logo-size;
+  }
+  .social__link{
+    &:hover,
+    &:focus {
+      .social__label {
+        display: block;
+      }
     }
   }
 }
