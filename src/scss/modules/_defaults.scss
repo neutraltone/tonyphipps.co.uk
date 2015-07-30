@@ -1,7 +1,6 @@
 * {
   -webkit-font-smoothing:antialiased;
   font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
   @include vendor(box-sizing, border-box);
 }
 
@@ -19,7 +18,7 @@ html {
 }
 
 body {
-  font:300 13px/1.4 'Lato', 'Helvetica Neue', Helvetica, Arial;
+  font:400 13px/1.4 'Quicksand', 'Helvetica Neue', Helvetica, Arial;
   background: url($background-image--body) #000 top center no-repeat;
   background-size: cover;
   color:#444;
