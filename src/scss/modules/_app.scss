@@ -18,7 +18,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 5;
   padding: 3rem 2rem;
   max-width: 680px;
 
@@ -103,6 +103,26 @@
         opacity: 1;
         transform: translate(-50%, 0);
     }
+}
+
+
+/**
+ * Contact Form
+ */
+
+.sidebar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  padding: 3rem 2rem;
+  width: 100%;
+  background: rgba(255,255,255,1)
+}
+
+.no-js .contact-form {
+  position: relative;
 }
 
 

@@ -42,7 +42,7 @@
       <div class="primary-content">
         <img src="/assets/img/logo.svg" width="120" height="120" class="logo" alt="Logo">
         <h1>UX Designer and Frontend Developer</h1>
-        <p>Hello. I am Tony Phipps, a UX designer and frontend developer from the United Kingdom.<!-- To find out more about me and what I do be sure to have a read of my <a href="#">blog</a>.--> If you would like to work with me, feel free to <a href="mailto:tony.phipps@gmail.com">get in touch</a>.</p>
+        <p>Hello. I am Tony Phipps, a UX designer and frontend developer from the United Kingdom.<!-- To find out more about me and what I do be sure to have a read of my <a href="#">blog</a>.--> If you would like to work with me, feel free to <a href="#contact" class="js--contact-form-trigger">get in touch</a>.</p>
         <ul class="social">
           <li class="social__item">
             <a class="social__link" href="https://github.com/neutraltone">
@@ -79,6 +79,40 @@
         </ul>
       </div>
     </main>
+
+    <aside class="sidebar">
+      <h2>Get in Touch</h2>
+      <p></p>
+      <form class="contact-form" id="contact">
+        <fieldset>
+          <legend>Contact Details</legend>
+          <div class="contact-form__field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="contact-form__field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="contact-form__field">
+            <label for="telephone">Telephone Number</label>
+            <input type="text" id="telephone" name="telephone" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Message</legend>
+          <div class="contact-form__field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+          <div class="contact-form__field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" reqiured></textarea>
+          </div>
+        </fieldset>
+        <input type="submit" />
+      </form>
+    </aside>
 
     <div class="loading">
       <div class="loading__spinner"></div>
