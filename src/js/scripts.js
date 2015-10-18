@@ -4,29 +4,71 @@
 
   $(function () {
 
-    $('.js--contact-form-trigger').on('click', function(e){
+    /**
+     * Variables
+     */
+
+    // Global variables
+    var contactArray     = [];
+    var baseAnimDuration = 300;
+
+    // Global selectors
+    var $contact         = $('.sidebar');
+    var $inputs          = $('.input');
+
+
+
+    /**
+     * Functions
+     */
+
+    var toggleContact = function (el, position) {
+      $(el).on('click', function(e){
+        e.preventDefault();
+        $contact.animate({
+          top: position
+        }, {
+          duration: baseAnimDuration * 5,
+          easing: 'easeOutBounce'
+        });
+      });
+    };
+
+
+
+    /**
+     * Scripts
+     */
+
+    // Add form content to array
+    $('.btn--primary').on('click', function (e) {
       e.preventDefault();
-
-      var $main          = $('.main');
-      var $sidebar       = $('.sidebar');
-      var $sidebarHeight = $sidebar.outerHeight();
-
-      console.log($sidebarHeight);
-
-      $main.animate({
-        top: '-' + $sidebarHeight,
-      }, 300 );
+      $inputs.each(function() {
+        contactArray.push($(this).text());
+      });
     });
+
+
+
+    /**
+     * Call functions
+     */
+
+    // Toggle contact form
+    toggleContact('.js--contact-form-open', 0);
+    toggleContact('.js--contact-form-close', '100%');
+
+
 
     /**
      * Window Load Calls
      */
+
     $(window).load(function() {
-
-      // Remove Loading Overlay
+      // Remove loading overlay
       $('.loading').fadeOut();
-
     });
+
   });
 
 })(jQuery, window, document);

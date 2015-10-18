@@ -42,7 +42,7 @@
       <div class="primary-content">
         <img src="/assets/img/logo.svg" width="120" height="120" class="logo" alt="Logo">
         <h1>Front-End Designer</h1>
-        <p>Hello. I am Tony Phipps, a Front-End Designer from the United Kingdom.<!-- To find out more about me and what I do be sure to have a read of my <a href="#">blog</a>.--> If you would like to work with me, feel free to <a href="#contact" class="js--contact-form-trigger">get in touch</a>.</p>
+        <p>Hello. I am Tony Phipps, a Front-End Designer from the United Kingdom.<!-- To find out more about me and what I do be sure to have a read of my <a href="#">blog</a>.--> If you would like to work with me, feel free to <a href="#contact" class="js--contact-form-open">get in touch</a>.</p>
         <ul class="social">
           <li class="social__item">
             <a class="social__link" href="https://github.com/neutraltone">
@@ -80,26 +80,23 @@
       </div>
     </main>
 
-    <aside class="sidebar">
-      <h2>Hi there!</h2>
-      <form>
-        <div>
-          Hi! I just thought I would reach out in about
-          <input type="text" name="nature" id="nature" placeholder="a website I would like building" />.
-        </div>
-        <div>
-          If you could get in touch drop me an
-          <select id="" name="">
+    <aside class="sidebar  contact">
+      <h2 class="contact__title">Hi there!</h2>
+      <form class="contact__form">
+        <p>Hi, I'm just reaching out to you regarding <span class="input" data-placeholder="a website I would like building" contenteditable></span>.</p>
+        <p>If you could get in touch drop me an
+          <select class="select" id="" name="">
             <option>email</option>
             <option>call</option>
           </select>
-          on
-          <input type="text" id="" name="" placeholder="tony@tonyphipps.co.uk" />.
-        </div>
+          on <span class="input" data-placeholder="tony@tonyphipps.co.uk" contenteditable></span>
+        </p>
         <div>
-          Kind regards,
-          <input type="text" id="" name="" placeholder="Tony Phipps" />
+          Kind regards,<br />
+          <span class="input" data-placeholder="Tony Phipps" contenteditable></span>
         </div>
+        <button class="btn  btn--bare  js--contact-form-close">&lt; Go back</button>
+        <button class="btn  btn--primary">Send</button>
       </form>
     </aside>
 
