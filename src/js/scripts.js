@@ -22,6 +22,7 @@
      * Functions
      */
 
+    // Toggle contact form
     var toggleContact = function (el, position) {
       $(el).on('click', function(e){
         e.preventDefault();
@@ -34,18 +35,13 @@
       });
     };
 
-
-
-    /**
-     * Scripts
-     */
-
     // Add form content to array
     $('.btn--primary').on('click', function (e) {
       e.preventDefault();
       $inputs.each(function() {
         contactArray.push($(this).text());
       });
+      contactArray = [];
     });
 
 
