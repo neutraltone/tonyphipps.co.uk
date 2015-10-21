@@ -25,7 +25,7 @@
 
   &:after {
     z-index: 4;
-    background: linear-gradient(270deg, $brand-colour__tertiary, $brand-colour__secondary);
+    background: linear-gradient(270deg, $photo-gradiant-colour__primary, $photo-gradiant-colour__secondary);
     background-size: 400% 400%;
     -webkit-animation: background-shimmer 15s ease infinite;
     -moz-animation: background-shimmer 15s ease infinite;
