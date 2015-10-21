@@ -13,8 +13,10 @@
     var baseAnimDuration = 300;
 
     // Global selectors
-    var $contact         = $('.sidebar');
+    var $sidebar         = $('.sidebar');
+    var $contact         = $('.contact');
     var $inputs          = $('.input');
+    var $select          = $('.select');
 
 
 
@@ -23,10 +25,11 @@
      */
 
     // Toggle contact form
-    var toggleContact = function (el, position) {
+    var toggleSidebar = function (el, position) {
       $(el).on('click', function(e){
         e.preventDefault();
-        $contact.animate({
+        $contact.toggleClass('contact--open');
+        $sidebar.animate({
           top: position
         }, {
           duration: baseAnimDuration * 5,
@@ -35,12 +38,21 @@
       });
     };
 
+    var toggleContactDetails = function () {
+      if ($select.val() === 'call') {
+        $('.input--contact-details').attr('data-placeholder', '+44 (0)20 1234 5678');
+      } else {
+        $('.input--contact-details').attr('data-placeholder', 'tony@tonyphipps.co.uk');
+      }
+    };
+
     // Add form content to array
     $('.btn--primary').on('click', function (e) {
       e.preventDefault();
       $inputs.each(function() {
         contactArray.push($(this).text());
       });
+      console.log(contactArray);
       contactArray = [];
     });
 
@@ -51,18 +63,25 @@
      */
 
     // Toggle contact form
-    toggleContact('.js--contact-form-open', 0);
-    toggleContact('.js--contact-form-close', '100%');
+    toggleSidebar('.js--contact-form-open', 0);
+    toggleSidebar('.js--contact-form-close', '100%');
 
+    // Toggle contact details
+    $select.on('change', function(){
+      toggleContactDetails();
+    });
 
 
     /**
-     * Window Load Calls
+     * Window load calls
      */
 
     $(window).load(function() {
       // Remove loading overlay
       $('.loading').fadeOut();
+
+      // Stretchy Select
+      Stretchy.selectors.filter = '.select';
     });
 
   });

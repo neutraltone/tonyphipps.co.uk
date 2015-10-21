@@ -1,8 +1,8 @@
 // Backgrounds
-$background-image--body: '/assets/img/background--body.jpg';
+$background-image--body: '../../assets/img/background--body.jpg';
 
 // Logo
-$logo-size: 160px;
+$logo-size:       160px;
 $logo-size--half: $logo-size / 2;
 
 // High level base settings
@@ -15,10 +15,13 @@ $base-anim-duration:     300ms;
 
 
 // Colour Palette
-$brand-colour__primary:   #bf3a2a;
-$brand-colour__secondary: rgba(0,100,30,.35);
-$brand-colour__tertiary:   rgba(0,30,100,.35);
-$brand-colour__quaternary: #999;
+$brand-colour__primary:    #bf3a2a;
+$brand-colour__secondary:  #023946;
+$brand-colour__tertiary:   #337686;
+$brand-colour__quaternary: #fff;
 
-$selection-colour__color: #fff;
+$photo-gradiant-colour__primary:   rgba(0,30,100,.35);
+$photo-gradiant-colour__secondary: rgba(0,100,30,.35);
+
+$selection-colour__color:      #fff;
 $selection-colour__background: #333;

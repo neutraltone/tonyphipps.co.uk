@@ -28,8 +28,7 @@ a {
   text-decoration: none;
   color: #fff;
   border-bottom: 1px dashed #fff;
-
-  @include transition(border-color $base-anim-duration ease-in-out);
+  transition: border-color $base-anim-duration ease-in-out;
 
   &:hover {
     border-bottom-color: rgba(0,0,0,0);
