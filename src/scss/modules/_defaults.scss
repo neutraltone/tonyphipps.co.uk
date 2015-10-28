@@ -10,14 +10,15 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 html {
   font-size:62.5%;
-  overflow: hidden;
 }
 
 body {
+  position: relative;
   font:400 13px/1.4 'Quicksand', 'Helvetica Neue', Helvetica, Arial;
   background-size: cover;
   color:#444;
