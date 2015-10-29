@@ -47,7 +47,7 @@
           <li class="social__item">
             <a class="social__link" href="https://github.com/neutraltone">
               <svg class="icon" viewBox="0 0 48 48">
-                <use xlink:href="#icon-social-github" />
+                <use xlink:href="#icon-social-github">
               </svg>
               <span class="social__label">Github</span>
             </a>
@@ -55,7 +55,7 @@
        --><li class="social__item">
             <a class="social__link" href="https://twitter.com/neutraltone">
               <svg class="icon" viewBox="0 0 48 48">
-                <use xlink:href="#icon-social-twitter" />
+                <use xlink:href="#icon-social-twitter">
               </svg>
               <span class="social__label">Twitter</span>
             </a>
@@ -63,7 +63,7 @@
        --><li class="social__item">
             <a class="social__link" href="https://instagram.com/neutraltone/">
               <svg class="icon" viewBox="0 0 48 48">
-                <use xlink:href="#icon-social-instagram" />
+                <use xlink:href="#icon-social-instagram">
               </svg>
               <span class="social__label">Instagram</span>
             </a>
@@ -71,7 +71,7 @@
        --><li class="social__item">
             <a class="social__link" href="https://500px.com/NeutralTone">
               <svg class="icon" viewBox="0 0 48 48">
-                <use xlink:href="#icon-social-500px" />
+                <use xlink:href="#icon-social-500px">
               </svg>
               <span class="social__label">500px</span>
             </a>
@@ -83,29 +83,32 @@
     <aside class="sidebar">
       <div class="contact">
         <h2 class="contact__title">Hi there!</h2>
-        <form class="contact__form">
-          <p>Hi Tony,</p>
-          <p>I just came across your website and want to reach out to you regarding <span class="input  js--tabbable" data-placeholder="a website I would like building" tabindex="-1" contenteditable></span>.</p>
-          <p>If you could get in touch drop me an
-            <select class="select  js--tabbable" tabindex="-1" name="">
-              <option>email</option>
-              <option>call</option>
+        <p>I'm always looking for exciting opportunities and people to work with. If this is you, please feel free to get in touch.</p>
+        <form class="contact-form">
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="name">What's your name?</label>
+            <input class="input  js--tabbable" tabindex="-1" type="text" id="name" name="name" placeholder="Will Hunting">
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="contactMethod">How should I contact you?</label>
+            <select class="select  js--tabbable" tabindex="-1" id="contactMethod" name="contactMethod">
+              <option>Email</option>
+              <option>Phone</option>
             </select>
-            on <span class="input  input--contact-details  js--tabbable" data-placeholder="tony@tonyphipps.co.uk" tabindex="-1" contenteditable></span>
-          </p>
-          <p>
-            Kind regards,<br />
-            <span class="input  js--tabbable" data-placeholder="Tony Phipps" tabindex="-1" contenteditable></span>
-          </p>
-          <button class="btn  btn--bare  js--contact-form-close" tabindex="-1">&lt; Go back</button>
-          <button class="btn  btn--primary  js--tabbable" tabindex="-1">Send</button>
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="contactDetails">What's your <span class="js--contact-details-label">email address</span>?</label>
+            <input class="input  js--contact-details-input  js--tabbable" tabindex="-1" type="text" id="contactDetails" name="contactDetails" placeholder="will@hunting.co.uk">
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="contactDetails">What's your <span>email address</span>?</label>
+            <textarea class="textarea  js--tabbable" tabindex="-1" id="contactDetails" name="contactDetails" placeholder="will@hunting.co.uk"></textarea>
+          </div>
+          <div>
+            <button class="btn  btn--bare  js--contact-form-close" tabindex="-1">&lt; Go back</button>
+            <button class="btn  btn--primary  js--tabbable" tabindex="-1">Send</button>
+          </div>
         </form>
-<!--
-        <hr>
-        <div class="contact__form-response  contact__form-response--success">
-          <p>Thanks for your email {{ name }}. It should be with me shortly.</p>
-        </div>
--->
       </div>
     </aside>
 
