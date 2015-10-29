@@ -4,7 +4,7 @@
 
 @media only screen and (min-width:480px) {
   hr {
-    margin: ($base-spacing-unit * 2) 0;
+    margin: (($base-spacing-unit / 2) * 3) 0;
   }
   .logo {
     width: ($logo-size) / 1.25;
@@ -55,6 +55,16 @@
   }
   .contact {
     max-width: 520px;
+
+    &__title {
+      margin-top: 0;
+      text-align: center;
+      font-size: 2.7rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+    }
   }
 }
 

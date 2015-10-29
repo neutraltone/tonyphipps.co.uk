@@ -45,10 +45,12 @@
 
     // Toggle contact details placeholder
     var toggleContactDetails = function () {
-      if ($select.val() === 'call') {
-        $('.input--contact-details').attr('data-placeholder', '+44 (0)20 1234 5678');
+      if ($select.val() === 'Phone') {
+        $('.js--contact-details-label').html('phone number');
+        $('.js--contact-details-input').attr('placeholder', '+44 (0)20 1234 5678');
       } else {
-        $('.input--contact-details').attr('data-placeholder', 'tony@tonyphipps.co.uk');
+        $('.js--contact-details-label').html('email address');
+        $('.js--contact-details-input').attr('placeholder', 'will@hunting.co.uk');
       }
     };
 
@@ -99,9 +101,6 @@
     $(window).load(function () {
       // Remove loading overlay
       $('.loading').fadeOut();
-
-      // Stretchy Select
-      Stretchy.selectors.filter = '.select';
     });
 
   });
