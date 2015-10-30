@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Tony Phipps - UX Designer and Frontend Developer">
+    <meta property="og:title" content="Tony Phipps - Front-End Designer">
     <meta property="og:image" content="http://tonyphipps.co.uk/assets/img/tony-phipps--opengraph.jpg">
     <meta property="og:url" content="http://tonyphipps.co.uk/">
     <meta property="og:description" content="Hello. I am Tony Phipps, a Front-End Designer from the United Kingdom.">
@@ -84,7 +84,7 @@
       <div class="contact">
         <h2 class="contact__title">Hi there!</h2>
         <p>I'm always looking for exciting opportunities and people to work with. If this is you, please feel free to get in touch.</p>
-        <form class="contact-form" action="/mailer.php">
+        <form class="contact-form" action="mailer.php">
           <div class="contact-form__field">
             <label class="contact-form__label" for="name">What's your name?</label>
             <input class="input  js--tabbable" tabindex="-1" type="text" id="name" name="name" placeholder="Will Hunting" required>
@@ -97,9 +97,10 @@
             <label class="contact-form__label" for="message">What's your enquiry?</label>
             <textarea class="textarea  js--tabbable" tabindex="-1" id="message" name="message" placeholder="I'm writing about a..." required></textarea>
           </div>
+          <div class="contact-form__messages"></div>
           <div>
             <button class="btn  btn--bare  js--contact-form-close" tabindex="-1">&lt; Go back</button>
-            <button class="btn  btn--primary  js--tabbable" tabindex="-1">Send</button>
+            <button class="btn  btn--primary  js--submit-btn  js--tabbable" tabindex="-1">Send</button>
           </div>
         </form>
       </div>
