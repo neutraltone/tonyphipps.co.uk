@@ -80,7 +80,7 @@
       </div>
     </main>
 
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
       <div class="contact">
         <h2 class="contact__title">Hi there!</h2>
         <p>I'm always looking for exciting opportunities and people to work with. If this is you, please feel free to get in touch.</p>
@@ -91,18 +91,20 @@
           </div>
           <div class="contact-form__field">
             <label class="contact-form__label" for="contactMethod">How should I contact you?</label>
-            <select class="select  js--tabbable" tabindex="-1" id="contactMethod" name="contactMethod">
-              <option>Email</option>
-              <option>Phone</option>
-            </select>
+            <div class="select">
+              <select class="select__input js--tabbable" tabindex="-1" id="contactMethod" name="contactMethod">
+                <option>Email</option>
+                <option>Phone</option>
+              </select>
+            </div>
           </div>
           <div class="contact-form__field">
             <label class="contact-form__label" for="contactDetails">What's your <span class="js--contact-details-label">email address</span>?</label>
             <input class="input  js--contact-details-input  js--tabbable" tabindex="-1" type="text" id="contactDetails" name="contactDetails" placeholder="will@hunting.co.uk">
           </div>
           <div class="contact-form__field">
-            <label class="contact-form__label" for="contactDetails">What's your <span>email address</span>?</label>
-            <textarea class="textarea  js--tabbable" tabindex="-1" id="contactDetails" name="contactDetails" placeholder="will@hunting.co.uk"></textarea>
+            <label class="contact-form__label" for="contactDetails">What's your enquiry?</label>
+            <textarea class="textarea  js--tabbable" tabindex="-1" id="contactDetails" name="contactDetails" placeholder="I'm writing about a..."></textarea>
           </div>
           <div>
             <button class="btn  btn--bare  js--contact-form-close" tabindex="-1">&lt; Go back</button>

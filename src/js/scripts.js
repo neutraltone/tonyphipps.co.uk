@@ -16,7 +16,7 @@
     var $sidebar         = $('.sidebar');
     var $contact         = $('.contact');
     var $inputs          = $('.input');
-    var $select          = $('.select');
+    var $select          = $('.select__input');
 
 
 
@@ -26,8 +26,8 @@
 
     // Toggle contact form
     var toggleSidebar = function (el, position) {
-      $(el).on('click', function (e){
-        e.preventDefault();
+      $(el).on('click', function (event){
+        event.preventDefault();
 
         $sidebar.toggleClass('sidebar--open');
         $contact.toggleClass('contact--open');
@@ -92,6 +92,7 @@
     $select.on('change', function (){
       toggleContactDetails();
     });
+
 
 
     /**
