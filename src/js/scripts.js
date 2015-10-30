@@ -16,7 +16,6 @@
     var $sidebar         = $('.sidebar');
     var $contact         = $('.contact');
     var $inputs          = $('.input');
-    var $select          = $('.select__input');
 
 
 
@@ -41,17 +40,6 @@
 
         preventTabbing();
       });
-    };
-
-    // Toggle contact details placeholder
-    var toggleContactDetails = function () {
-      if ($select.val() === 'Phone') {
-        $('.js--contact-details-label').html('phone number');
-        $('.js--contact-details-input').attr('placeholder', '+44 (0)20 1234 5678');
-      } else {
-        $('.js--contact-details-label').html('email address');
-        $('.js--contact-details-input').attr('placeholder', 'will@hunting.co.uk');
-      }
     };
 
     // Prevent tabbing to off canvas elements
@@ -87,11 +75,6 @@
     // Toggle contact form
     toggleSidebar('.js--contact-form-open', 0);
     toggleSidebar('.js--contact-form-close', '100%');
-
-    // Toggle contact details
-    $select.on('change', function (){
-      toggleContactDetails();
-    });
 
 
 
