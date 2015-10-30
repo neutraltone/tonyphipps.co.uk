@@ -143,9 +143,11 @@
   .select__input,
   .textarea {
     display: block;
-    padding: ($base-spacing-unit / 2);
+    padding: ($base-spacing-unit / 2) ($base-spacing-unit / 2) ($base-spacing-unit / 2) (($base-spacing-unit / 2) - 4);
     width: 100%;
     border: 0;
+    border-left: 4px solid #fff;
+    background-color: $input-background-colour;
     color: $brand-colour__secondary;
     font-weight: bold;
 
@@ -156,11 +158,19 @@
     &:focus {
       outline: 0;
     }
+
+    &.error {
+      border-color: $brand-colour__primary;
+    }
+
+    &.success {
+      border-color: $input--success;
+    }
   }
 
   .select {
     position: relative;
-    background-color: $base-input-background-colour;
+    background-color: $input-background-colour;
 
     &__input {
       position: relative;
