@@ -56,17 +56,6 @@
     };
 
 
-    // Add form content to array
-    $('.btn--primary').on('click', function (e) {
-      e.preventDefault();
-      $inputs.each(function () {
-        contactArray.push($(this).text());
-      });
-      console.log(contactArray);
-      contactArray = [];
-    });
-
-
 
     /**
      * Call functions
