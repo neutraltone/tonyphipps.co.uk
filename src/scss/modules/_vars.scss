@@ -1,17 +1,24 @@
+//------------------------------------*\
+//  $VARS
+//------------------------------------*/
+
 // Backgrounds
 $background-image--body: '/assets/img/background--body.jpg';
+
 
 // Logo
 $logo-size:       160px;
 $logo-size--half: $logo-size / 2;
 
+
 // High level base settings
-$base-font-size:               14px;
-$base-line-height:             22px;
-$base-spacing-unit:            24px;
-$base-text-colour:             #fff;
-$base-background-colour:       #fff;
-$base-anim-duration:           300ms;
+$base-font-size:          16px;
+$base-line-height:        22px;
+$base-spacing-unit:       24px;
+$base-text-colour:        #fff;
+$base-background-colour:  #fff;
+$base-anim-duration:      300ms;
+$base-font-family:        'europa', 'Quicksand', 'Helvetica Neue', Helvetica, Arial;
 
 
 // Colour Palette
@@ -28,3 +35,16 @@ $photo-gradiant-colour__secondary: rgba(0,100,30,.4);
 
 $selection-colour__color:      #fff;
 $selection-colour__background: #333;
+
+
+// Hold our breakpoint aliases and conditions in a list.
+//
+// These can be invoked later on via the 'media-query()' mixin found in
+// 'mixins/_responsive.scss'.
+
+$breakpoints: (
+  'palm'      '(max-width: 480px)',
+  'portable'  '(min-width: 480px)',
+  'desk'      '(min-width: 800px)',
+  'retina'    '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)'
+);

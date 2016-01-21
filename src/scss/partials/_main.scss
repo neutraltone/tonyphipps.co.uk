@@ -13,7 +13,7 @@
     top: 0;
     left: 0;
     display: block;
-    width: 100%;
+    width: 200%;
     height: 100%;
     content: '';
   }
@@ -26,7 +26,6 @@
   &:after {
     z-index: 4;
     background: linear-gradient(270deg, $photo-gradiant-colour__primary, $photo-gradiant-colour__secondary);
-    background-size: 400% 400%;
     -webkit-animation: background-shimmer 15s ease infinite;
     -moz-animation: background-shimmer 15s ease infinite;
     animation: background-shimmer 15s ease infinite;
@@ -35,17 +34,19 @@
 }
 
 @-webkit-keyframes background-shimmer {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{transform:translateX(0%)}
+    50%{transform:translateX(-50%)}
+    100%{transform:translateX(0%)}
 }
+
 @-moz-keyframes background-shimmer {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{transform:translateX(0%)}
+    50%{transform:translateX(-50%)}
+    100%{transform:translateX(0%)}
 }
+
 @keyframes background-shimmer {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{transform:translateX(0%)}
+    50%{transform:translateX(-50%)}
+    100%{transform:translateX(0%)}
 }
