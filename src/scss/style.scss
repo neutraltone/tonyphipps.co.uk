@@ -2,9 +2,11 @@
 // SCSS MIXINS
 //----------------------------------*/
 
-@import 'mixins/bourbon/bourbon';
-@import 'mixins/_vendor.scss';
+@import 'mixins/_font-size.scss';
 @import 'mixins/_position.scss';
+@import 'mixins/_responsive.scss';
+@import 'mixins/_underline.scss';
+@import 'mixins/_vendor.scss';
 
 //----------------------------------*\
 // CONFIG MODULES
@@ -34,6 +36,8 @@
 @import 'modules/_inputs.scss';
 @import 'modules/_lists.scss';
 @import 'modules/_typography.scss';
+@import 'modules/_horizontal-rules.scss';
+@import 'modules/_animations.scss';
 @import 'modules/_misc.scss';
 @import 'modules/_app.scss';
 

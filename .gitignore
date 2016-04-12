@@ -8,3 +8,4 @@ node_modules
 .sass-cache
 style.min.css
 scripts.min.js
+style.min.css.map
