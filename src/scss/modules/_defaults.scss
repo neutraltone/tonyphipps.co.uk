@@ -4,6 +4,10 @@
   @include vendor(box-sizing, border-box);
 }
 
+:root {
+  font: 400 #{($base-font-size/16px)*1em}/#{$base-line-height/$base-font-size} $base-font-family;
+}
+
 html,
 body {
   margin: 0;
@@ -13,13 +17,8 @@ body {
   overflow: hidden;
 }
 
-html {
-  font-size:62.5%;
-}
-
 body {
   position: relative;
-  font:400 13px/1.4 'Quicksand', 'Helvetica Neue', Helvetica, Arial;
   background-size: cover;
   color:#444;
 }

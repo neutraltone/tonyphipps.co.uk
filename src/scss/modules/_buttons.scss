@@ -1,12 +1,16 @@
 .btn {
   display: block;
   margin: 0.83em 0 0 0;
-  padding: 1.5rem 3.5rem;
+  padding: 1rem 2.5rem;
   color: #fff;
   outline: none;
   transition: opacity 300ms linear,
               color 300ms linear,
               border-color 300ms linear;
+
+  @include media-query(portable) {
+    padding: 1.5rem 3.5rem;
+  }
 
   &--bare {
     padding-left: 0;

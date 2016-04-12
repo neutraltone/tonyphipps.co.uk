@@ -9,14 +9,11 @@
      */
 
     // Global variables
-    var contactArray     = [];
     var baseAnimDuration = 300;
 
     // Global selectors
     var $sidebar         = $('.sidebar');
     var $contact         = $('.contact');
-    var $inputs          = $('.input');
-    var $select          = $('.select');
 
 
 
@@ -26,8 +23,8 @@
 
     // Toggle contact form
     var toggleSidebar = function (el, position) {
-      $(el).on('click', function (e){
-        e.preventDefault();
+      $(el).on('click', function (event){
+        event.preventDefault();
 
         $sidebar.toggleClass('sidebar--open');
         $contact.toggleClass('contact--open');
@@ -43,15 +40,6 @@
       });
     };
 
-    // Toggle contact details placeholder
-    var toggleContactDetails = function () {
-      if ($select.val() === 'call') {
-        $('.input--contact-details').attr('data-placeholder', '+44 (0)20 1234 5678');
-      } else {
-        $('.input--contact-details').attr('data-placeholder', 'tony@tonyphipps.co.uk');
-      }
-    };
-
     // Prevent tabbing to off canvas elements
     var preventTabbing = function () {
       var $links = $('.js--tabbable');
@@ -65,15 +53,59 @@
       }
     };
 
-
-    // Add form content to array
-    $('.btn--primary').on('click', function (e) {
+    // AJAX Contact form
+    $('.js--submit-btn').click(function(e) {
       e.preventDefault();
-      $inputs.each(function () {
-        contactArray.push($(this).text());
+
+      var proceed = true;
+      var postData = '';
+      var output = '';
+
+      //simple validation at client's end
+      //loop through each field and we simply change border color to red for invalid fields
+      $('.contact-form input[required], .contact-form textarea[required]').each(function(){
+        $(this).addClass('success');
+        if (!$.trim($(this).val())){ //if this field is empty
+          $(this).removeClass('success');
+          $(this).addClass('error'); //change border color to red
+          output = '<p class="error"><span>Whoops, an error has occurred.</span> Please ensure you have filled out all required fields.</p>';
+          $('.contact-form .contact-form__messages').hide().html(output).fadeIn();
+          proceed = false; //set do not proceed flag
+        } else {
+          $(this).removeClass('error'); //change border color to red
+          $(this).addClass('success'); //change border color to red
+        }
+        //check invalid email
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        if ($(this).attr('type')==='email' && !emailReg.test($.trim($(this).val()))){
+          $(this).removeClass('success');
+          $(this).addClass('error'); //change border color to red
+          proceed = false; //set do not proceed flag
+        }
       });
-      console.log(contactArray);
-      contactArray = [];
+
+      if (proceed) //everything looks good! proceed...
+      {
+        //get input field values data to be sent to server
+        postData = {
+          'name'    : $('input[name="name"]').val(),
+          'email'   : $('input[name="email"]').val(),
+          'message' : $('textarea[name="message"]').val()
+        };
+
+        //Ajax post data to server
+        $.post('./mailer.php', postData, function(response){
+          if (response.type === 'error'){ //load json data from server and output message
+            output = '<p class="error"><span>Whoops, an error has occurred.</span> '+response.text+'</p>';
+          } else {
+            output = '<p class="success">'+response.text+'</p>';
+            //reset values in all input fields
+            $('.contact-form  input[type=text], .contact-form textarea').val('').removeClass('success');
+            $('.contact-form #contact_body').slideUp(); //hide form after success
+          }
+          $('.contact-form .contact-form__messages').hide().html(output).fadeIn();
+        }, 'json');
+      }
     });
 
 
@@ -86,10 +118,6 @@
     toggleSidebar('.js--contact-form-open', 0);
     toggleSidebar('.js--contact-form-close', '100%');
 
-    // Toggle contact details
-    $select.on('change', function (){
-      toggleContactDetails();
-    });
 
 
     /**
@@ -99,9 +127,6 @@
     $(window).load(function () {
       // Remove loading overlay
       $('.loading').fadeOut();
-
-      // Stretchy Select
-      Stretchy.selectors.filter = '.select';
     });
 
   });
