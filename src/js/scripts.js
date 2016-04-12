@@ -32,7 +32,7 @@
         $sidebar.animate({
           top: position
         }, {
-          duration: baseAnimDuration * 5,
+          duration: baseAnimDuration * 4,
           easing: 'easeOutBounce'
         });
 
