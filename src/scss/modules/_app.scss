@@ -95,7 +95,7 @@
   visibility: hidden;
   opacity: 0;
   background-color: $brand-colour__secondary;
-  transform: scale(.95) translateY(30px);
+  transform: scale(.95);
   transition:
     visibility 0s ease-in-out $base-anim-duration,
     opacity $base-anim-duration ease-in-out,
@@ -105,7 +105,7 @@
     visibility: visible;
     opacity: 1;
     transition-delay: 0s;
-    transform: scale(1) translateY(0);
+    transform: scale(1);
   }
 }
 
