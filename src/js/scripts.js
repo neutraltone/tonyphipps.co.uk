@@ -8,9 +8,6 @@
      * Variables
      */
 
-    // Global variables
-    var baseAnimDuration = 300;
-
     // Global selectors
     var $sidebar         = $('.sidebar');
     var $contact         = $('.contact');
@@ -22,19 +19,12 @@
      */
 
     // Toggle contact form
-    var toggleSidebar = function (el, position) {
-      $(el).on('click', function (event){
-        event.preventDefault();
+    var toggleSidebar = function (el) {
+      $(el).on('click', function (e){
+        e.preventDefault();
 
         $sidebar.toggleClass('sidebar--open');
         $contact.toggleClass('contact--open');
-
-        $sidebar.animate({
-          top: position
-        }, {
-          duration: baseAnimDuration * 4,
-          easing: 'easeOutBounce'
-        });
 
         preventTabbing();
       });
@@ -115,8 +105,8 @@
      */
 
     // Toggle contact form
-    toggleSidebar('.js--contact-form-open', 0);
-    toggleSidebar('.js--contact-form-close', '100%');
+    toggleSidebar('.js--contact-form-open');
+    toggleSidebar('.js--contact-form-close');
 
 
 
