@@ -83,18 +83,31 @@
  * Contact Form
  */
 
- .sidebar {
-   position: absolute;
-   top: 100%;
-   left: 0;
-   z-index: 3;
-   display: block;
-   padding: 2.4rem 2.4rem;
-   width: 100%;
-   height: 100%;
-   overflow-y: auto;
-   background-color: $brand-colour__secondary;
- }
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  padding: 2.4rem 2.4rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  background-color: $brand-colour__secondary;
+  transform: scale(.95) translateY(30px);
+  transition:
+    visibility 0s ease-in-out $base-anim-duration,
+    opacity $base-anim-duration ease-in-out,
+    transform $base-anim-duration ease-in-out;
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+    transform: scale(1) translateY(0);
+  }
+}
 
 .no-js .contact-form {
   position: relative;
@@ -107,11 +120,6 @@
   &__title {
     margin-top: 0;
     text-align: center;
-    //font-size: 2.7rem;
-  }
-
-  p {
-    //font-size: 1.6rem;
   }
 
   &--open &__title {
@@ -124,7 +132,6 @@
 
 .contact-form {
   margin: 0 auto;
-  //font-size: 1.6rem;
   overflow: hidden;
 
   &__field {
