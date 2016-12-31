@@ -13,22 +13,38 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+title: Tony Phipps - Front-end Developer
+email: tonyphipps@gmail.com
+description:  > # this means to ignore newlines until "baseurl:"
+  Hello. I am Tony Phipps, a Front-end Developer from the United Kingdom.
+
+baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
+url: "http://tonyphipps.co.uk" # the base hostname & protocol for your site
+
 twitter_username: jekyllrb
 github_username:  jekyll
 
+google_analytics: "UA-15367962-2"
+disqus_account: tonyphipps
+
+# Social networks usernames
+social:
+  - title: github
+    url: https://github.com/neutraltone
+  - title: codepen
+    url: https://codepen.io/neutraltone
+  - title: twitter
+    url: https://twitter.com/neutraltone
+  - title: dribbble
+    url: https://dribbble.com/neutraltone
+
 # Build settings
 markdown: kramdown
-theme: minima
+highlighter: rouge
+permalink: pretty
+#paginate: 5
+#gems: [jekyll-paginate, jekyll-feed]
 gems:
   - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
