@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+<main class="main" role="main">
+  <div class="primary-content">
+    <img src="assets/img/logo.svg" width="120" height="120" class="logo" alt="Logo">
+    <h1>Front-end Developer</h1>
+    <p>Hello. I am Tony, a Front-end Developer from the United Kingdom.<!-- To find out more about me and what I do be sure to have a read of my <a href="#">blog</a>.--> If you would like to work with me, feel free to <a href="#contact" class="js--contact-form-open">get in touch</a>.</p>
+    <ul class="social">
+      <li class="social__item">
+        <a class="social__link" href="https://github.com/neutraltone">
+          <svg class="icon" viewBox="0 0 48 48">
+            <use xlink:href="#icon-social-github">
+          </svg>
+          <span class="social__label">Github</span>
+        </a>
+      </li><!--
+   --><li class="social__item">
+        <a class="social__link" href="https://codepen.io/neutraltone">
+          <svg class="icon" viewBox="0 0 48 48">
+            <use xlink:href="#icon-social-codepen">
+          </svg>
+          <span class="social__label">Codepen</span>
+        </a>
+      </li><!--
+   --><li class="social__item">
+        <a class="social__link" href="https://twitter.com/neutraltone">
+          <svg class="icon" viewBox="0 0 48 48">
+            <use xlink:href="#icon-social-twitter">
+          </svg>
+          <span class="social__label">Twitter</span>
+        </a>
+      </li><!--
+   --><li class="social__item">
+        <a class="social__link" href="https://dribbble.com/neutraltone">
+          <svg class="icon" viewBox="0 0 48 48">
+            <use xlink:href="#icon-social-dribbble">
+          </svg>
+          <span class="social__label">Dribbble</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</main>
+
+<aside class="sidebar" id="sidebar">
+  <div class="contact">
+    <h2 class="contact__title">Hi there!</h2>
+    <p>I'm always looking for new opportunities and people to work with. If this is you, please feel free to get in touch.</p>
+    <form class="contact-form" action="mailer.php">
+      <div class="contact-form__field  paragraph">
+        <label class="contact-form__label  paragraph" for="name">What's your name?</label>
+        <input class="input  js--tabbable" tabindex="-1" type="text" id="name" name="name" placeholder="Will Hunting" required>
+      </div>
+      <div class="contact-form__field  paragraph">
+        <label class="contact-form__label" for="email">What's your email address?</label>
+        <input class="input  js--tabbable" tabindex="-1" type="text" id="email" name="email" placeholder="will@hunting.co.uk" required>
+      </div>
+      <div class="contact-form__field  paragraph">
+        <label class="contact-form__label" for="message">What's your enquiry?</label>
+        <textarea class="textarea  js--tabbable" tabindex="-1" id="message" name="message" placeholder="I'm writing about a..." required></textarea>
+      </div>
+      <div class="contact-form__messages  paragraph"></div>
+      <div>
+        <button class="btn  btn--bare  js--contact-form-close  paragraph" tabindex="-1">&lt; Go back</button>
+        <button class="btn  btn--primary  js--submit-btn  js--tabbable  paragraph" tabindex="-1">Send</button>
+      </div>
+    </form>
+  </div>
+</aside>

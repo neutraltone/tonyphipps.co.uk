@@ -1,0 +1,74 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Meta data -->
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="">
+
+  <!-- Opengraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:image" content="/assets/img/social/meta__facebook-og.jpg">
+  <meta property="og:image:secure_url" content="/assets/img/social/meta__facebook-og.jpg">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Twitter cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:image" content="/assets/img/social/meta__twitter-card.jpg">
+  <meta name="twitter:url" content="">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="{{ site.title }}">
+  <link rel="icon" sizes="192x192" href="/assets/img/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+  <link rel="apple-touch-icon" href="/assets/img/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="/assets/img/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#023946">
+
+  <!-- Color the status bar on mobile devices -->
+  <meta name="theme-color" content="#bf3a2a">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- DNS Prefetch -->
+  <link href="//www.google-analytics.com" rel="dns-prefetch">
+  <link href="//ajax.googleapis.com" rel="dns-prefetch">
+
+  <!-- Stylesheets -->
+  <link href="/assets/css/main.min.css" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="/assets/js/vendor/modernizr-build.min.js"></script>
+  <script src="https://use.typekit.net/bjm5wxa.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <script>
+    // Ajax SVG sprite.
+    window.addEventListener('load', function (event) {
+      var ajax = new XMLHttpRequest();
+      ajax.open('GET', 'assets/img/sprite.svg', true);
+      ajax.send();
+      ajax.onload = function (e) {
+        var div = document.createElement('div');
+        div.innerHTML = ajax.responseText;
+        document.body.insertBefore(div, document.body.childNodes[0]);
+      }
+    });
+  </script>
+</head>

@@ -1,0 +1,15 @@
+{
+  "lang": "en",
+  "name": "Tony Phipps, Front-end Developer",
+  "icons": [
+    {
+      "src": "/assets/img/touch/icon.png",
+      "sizes": "300x300",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#023946",
+  "theme_color": "#bf3a2a"
+}
