@@ -5,22 +5,13 @@
 
   <!-- Meta data -->
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
   <!-- Opengraph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:image" content="/assets/img/social/meta__facebook-og.jpg">
-  <meta property="og:image:secure_url" content="/assets/img/social/meta__facebook-og.jpg">
-  <meta property="og:url" content="">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  {% include head__opengraph.html %}
 
   <!-- Twitter cards -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta name="twitter:image" content="/assets/img/social/meta__twitter-card.jpg">
-  <meta name="twitter:url" content="">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  {% include head__twitter-cards.html %}
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
