@@ -1,0 +1,23 @@
+{
+  "src": {
+    "src": "_source",
+    "scss": "_source/scss/**/*.scss",
+    "img": "_source/img/{,*/}*.{jpg,jpeg,png,gif,svg}",
+    "sprite": "_source/icons/{,*/}*.svg",
+    "js": "_source/js/**/*.js",
+    "vendor": "_source/js/vendor/**/*.js"
+  },
+  "dest": {
+    "dist": "_site",
+    "css": "_site/assets/css",
+    "img": "_site/assets/img",
+    "js": "_site/assets/js",
+    "vendor": "_site/assets/js/vendor"
+  },
+  "dep": {
+    "normalize": "node_modules/normalize-scss/sass"
+  },
+  "support": {
+    "browser": ["last 2 versions"]
+  }
+}
