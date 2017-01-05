@@ -25,6 +25,7 @@ import gulpStylelint from 'gulp-stylelint';
 import autoprefixer from 'gulp-autoprefixer';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
+import { spawn } from 'child_process';
 
 
 /**
@@ -115,7 +116,7 @@ gulp.task('serve', [
  */
 
 gulp.task('sass', () => {
-  return gulp.src(options.src.scss)
+  gulp.src(options.src.scss)
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -130,7 +131,7 @@ gulp.task('sass', () => {
       cascade: false,
     }))
     .pipe(header(banner, {
-      pkg: pkg,
+      pkg,
     }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('.'))
@@ -149,8 +150,7 @@ gulp.task('sass', () => {
  */
 
 gulp.task('lint-sass', () => {
-  return gulp
-    .src(options.src.scss)
+  gulp.src(options.src.scss)
     .pipe(gulpStylelint({
       reporters: [{
         formatter: 'string',
@@ -174,26 +174,26 @@ gulp.task('lint-sass', () => {
  */
 
 gulp.task('js', () => {
-  return gulp.src([options.src.vendor, options.src.js])
+  gulp.src([options.src.vendor, options.src.js])
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(babel({
-      presets: ['es2015']
+      presets: ['es2015'],
     }))
     .pipe(concat('scripts.js'))
     .pipe(uglify())
     .pipe(header(banner, {
-      pkg: pkg
+      pkg,
     }))
     .pipe(rename({
-      suffix: '.min'
+      suffix: '.min',
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(options.dest.js))
     .pipe(browserSync.reload({
       stream: true,
-      once: true
-    }))
+      once: true,
+    }));
 });
 
 
@@ -207,14 +207,13 @@ gulp.task('js', () => {
  */
 
 gulp.task('modernizr', () => {
-  return gulp
-    .src(options.src.js)
+  gulp.src(options.src.js)
     .pipe(modernizr('modernizr-build.min.js'))
     .pipe(gulp.dest(options.dest.vendor))
     .pipe(browserSync.reload({
       stream: true,
-      once: true
-    }))
+      once: true,
+    }));
 });
 
 
@@ -225,9 +224,9 @@ gulp.task('modernizr', () => {
  */
 
 gulp.task('lint-js', () => {
-  return gulp.src(options.src.js)
+  gulp.src(options.src.js)
     .pipe(eslint())
-    .pipe(eslint.format())
+    .pipe(eslint.format());
 });
 
 
@@ -240,16 +239,16 @@ gulp.task('lint-js', () => {
  */
 
 gulp.task('images', () => {
-  return gulp.src(options.src.img)
+  gulp.src(options.src.img)
     .pipe(imagemin({
-        progressive: true,
-        svgoPlugins: [{
-          removeViewBox: false
-        }],
-        use: [pngquant()]
+      progressive: true,
+      svgoPlugins: [{
+        removeViewBox: false,
+      }],
+      use: pngquant(),
     }))
     .pipe(gulp.dest(options.dest.img))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 });
 
 
@@ -263,12 +262,12 @@ gulp.task('images', () => {
  */
 
 gulp.task('svg-sprite', () => {
-  return gulp.src(options.src.sprite)
+  gulp.src(options.src.sprite)
     .pipe(svgmin())
     .pipe(svgstore())
-    .pipe(cheerio($ => $('svg').attr('style',  'display:none')))
+    .pipe(cheerio($ => $('svg').attr('style', 'display:none')))
     .pipe(gulp.dest(options.dest.img))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 });
 
 
@@ -278,14 +277,13 @@ gulp.task('svg-sprite', () => {
  * - Run Jekyll's `build' command
  */
 
-gulp.task('jekyll', function (gulpCallBack) {
-  const spawn = require('child_process').spawn;
+gulp.task('jekyll', (gulpCallBack) => {
   const jekyll = spawn('jekyll', ['build', '--incremental'], {
     stdio: 'inherit',
   });
 
-  jekyll.on('exit', function(code) {
-    gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
+  jekyll.on('exit', (code) => {
+    gulpCallBack(code === 0 ? null : `ERROR: Jekyll process exited with code: ${code}`);
   });
 });
 
