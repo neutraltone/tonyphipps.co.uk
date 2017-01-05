@@ -1,11 +1,11 @@
 {
   "src": {
     "src": "_source",
-    "scss": "_source/scss/**/*.scss",
-    "img": "_source/img/{,*/}*.{jpg,jpeg,png,gif,svg}",
-    "sprite": "_source/icons/{,*/}*.svg",
-    "js": "_source/js/**/*.js",
-    "vendor": "_source/js/vendor/**/*.js"
+    "scss": "_source/assets/scss/**/*.scss",
+    "img": "_source/assets/img/{,*/}*.{jpg,jpeg,png,gif,svg}",
+    "sprite": "_source/assets/icons/{,*/}*.svg",
+    "js": "_source/assets/js/**/*.js",
+    "vendor": "_source/assets/js/vendor/**/*.js"
   },
   "dest": {
     "dist": "_site",

@@ -5,10 +5,10 @@
  */
 
 import gulp from 'gulp';
+import babel from 'gulp-babel';
 import browserSync from 'browser-sync';
 import cheerio from 'gulp-cheerio';
 import concat from 'gulp-concat';
-import babel from 'gulp-babel';
 import eslint from 'gulp-eslint';
 import header from 'gulp-header';
 import imagemin from 'gulp-imagemin';
@@ -17,6 +17,7 @@ import path from 'path';
 import plumber from 'gulp-plumber';
 import pngquant from 'imagemin-pngquant';
 import rename from 'gulp-rename';
+import runSequence from 'gulp-run-sequence';
 import svgmin from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import uglify from 'gulp-uglify';
@@ -52,7 +53,7 @@ const banner = [
     * @version ${pkg.version}
     * Copyright ${new Date().getFullYear()}. ${pkg.license} licensed.
     */`,
-  '\n'
+  '\n',
 ].join('');
 
 
@@ -65,23 +66,40 @@ const banner = [
  */
 
 gulp.task('serve', [
-    'jekyll',
-    'lint-sass',
-    'sass',
-    'lint-js',
-    'js',
-    'modernizr',
-    'images',
-    'svg-sprite'
+  'lint-sass',
+  'sass',
+  'lint-js',
+  'js',
+  'modernizr',
+  'images',
+  'svg-sprite',
+], () => {
+  browserSync.init({
+    server: options.dest.dist,
+  });
+  gulp.watch(options.src.scss, ['lint-sass', 'sass']);
+  gulp.watch(options.src.js, ['lint-js', 'js', 'modernizr']);
+  gulp.watch(options.src.img, ['images']);
+  gulp.watch(options.src.sprite, ['svg-sprite']);
+  gulp.watch([
+    path.join(options.src.src, '*.html'),
+    path.join(options.src.src, '*/*.html'),
+    path.join(options.src.src, '*/*.md'),
   ], () => {
-    browserSync.init({
-      server: options.dest.dist
-    });
-    gulp.watch(options.src.scss, ['lint-sass', 'sass']);
-    gulp.watch(options.src.js, ['lint-js', 'js', 'modernizr']);
-    gulp.watch(options.src.img, ['images']);
-    gulp.watch(options.src.sprite, ['svg-sprite']);
-    gulp.watch(`${options.dest.dist}/*.html`).on('change', browserSync.reload);
+    runSequence('jekyll',
+      [
+        'lint-sass',
+        'lint-sass',
+        'sass',
+        'lint-js',
+        'js',
+        'modernizr',
+        'images',
+        'svg-sprite',
+      ],
+      browserSync.reload
+    );
+  });
 });
 
 
@@ -102,25 +120,25 @@ gulp.task('sass', () => {
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: [
-        options.dep.normalize
+        options.dep.normalize,
       ],
       outputStyle: 'compressed',
-      errLogToConsole: true
+      errLogToConsole: true,
     }))
     .pipe(autoprefixer({
-			browsers: options.support.browser,
-			cascade: false
-		}))
+      browsers: options.support.browser,
+      cascade: false,
+    }))
     .pipe(header(banner, {
-      pkg: pkg
+      pkg: pkg,
     }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(options.dest.css))
     .pipe(browserSync.reload({
       stream: true,
-      once: true
-    }))
+      once: true,
+    }));
 });
 
 
@@ -136,10 +154,10 @@ gulp.task('lint-sass', () => {
     .pipe(gulpStylelint({
       reporters: [{
         formatter: 'string',
-        console: true
+        console: true,
       }],
       failAfterError: false,
-      syntax: "scss"
+      syntax: 'scss',
     }));
 });
 
@@ -260,18 +278,33 @@ gulp.task('svg-sprite', () => {
  * - Run Jekyll's `build' command
  */
 
-gulp.task('jekyll', function (gulpCallBack){
-  var spawn = require('child_process').spawn;
-  var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit'});
+gulp.task('jekyll', function (gulpCallBack) {
+  const spawn = require('child_process').spawn;
+  const jekyll = spawn('jekyll', ['build', '--incremental'], {
+    stdio: 'inherit',
+  });
 
   jekyll.on('exit', function(code) {
-    gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
+    gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
   });
 });
 
 
 // Default Task
-gulp.task('default', ['serve']);
+gulp.task('default', () => {
+  runSequence('jekyll', 'serve');
+});
 
 // Build Task
-gulp.task('build', ['jekyll', 'lint-sass', 'sass', 'lint-js', 'js', 'modernizr', 'images', 'svg-sprite']);
+gulp.task('build', () => {
+  runSequence('jekyll', [
+    'lint-sass',
+    'lint-sass',
+    'sass',
+    'lint-js',
+    'js',
+    'modernizr',
+    'images',
+    'svg-sprite',
+  ]);
+});

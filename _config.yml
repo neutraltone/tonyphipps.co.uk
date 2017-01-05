@@ -18,6 +18,8 @@ email: tonyphipps@gmail.com
 description:  > # this means to ignore newlines until "baseurl:"
   Hello. I am Tony Phipps, a Front-end Developer from the United Kingdom.
 
+source: _source
+
 baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
 url: "http://tonyphipps.co.uk" # the base hostname & protocol for your site
 
@@ -48,5 +50,5 @@ permalink: pretty
 #gems: [jekyll-paginate, jekyll-feed]
 gems:
   - jekyll-feed
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+exclude: ["node_modules", "gulpfile.js", "package.json", "README.md", "assets"]
 
