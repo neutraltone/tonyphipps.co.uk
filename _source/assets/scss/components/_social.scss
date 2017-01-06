@@ -1,0 +1,63 @@
+/**
+ * components/_social.scss
+ */
+
+/* ==========================================================================
+   Social
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Social styles
+ */
+
+.social {
+  margin: 2.4rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    transition: fill $base-anim-duration $base-anim-easing;
+    border-bottom: none;
+    width: 48px;
+    height: 48px;
+    fill: color(bw, white);
+
+    &:hover,
+    &:focus {
+      fill: color(brand, primary);
+
+      .social__label {
+        display: none;
+        animation-name: fadeInDown;
+        animation-duration: $base-anim-duration;
+        color: color(text, light);
+
+        @include av-mq(desk) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__label {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: transparentize(color(bw, black), 0.5);
+    padding: 5px 10px;
+  }
+}

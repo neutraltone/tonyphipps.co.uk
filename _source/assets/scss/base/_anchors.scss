@@ -1,0 +1,23 @@
+/**
+ * base/_anchors.scss
+ */
+
+/* ==========================================================================
+   Anchors
+   ========================================================================== */
+
+/**
+ * Set default anchor styles
+ */
+
+a {
+  transition: border-color $base-anim-duration ease-in-out;
+  border-bottom: 1px dashed color(bw, white);
+  padding-bottom: 4px;
+  text-decoration: none;
+  color: color(bw, white);
+
+  &:hover {
+    border-bottom-color: rgba(0,0,0,0);
+  }
+}

@@ -11,33 +11,28 @@
  */
 
 $colors: (
-  // Base text colors
+  brand: (
+    primary: #bf3a2a,
+    secondary: #023946,
+    tertiary: #337686,
+    quaternary: #fff
+  ),
   text: (
     dark: #333,
     light: #fff
   ),
-
-  // Base background colors
-  background: (
-    dark: #333,
-    light: #fff
-  ),
-
-  // Black and white
   bw: (
     black: #000,
     white: #fff
   ),
-
-  // Brand colors
-  brand: (
-    primary: #fff,
-    secondary: #fff,
-    tertiary: #fff,
-    quaternary: #fff
+  context: (
+    success: #34bf2a,
+    error: #bf3a2a
   ),
-
-  // Social colors
+  gradient: (
+    start: rgba(0, 30, 100, 0.5),
+    end: rgba(0, 100, 30, 0.4)
+  ),
   social: (
     facebook: #365397,
     twitter: #00a9f1,

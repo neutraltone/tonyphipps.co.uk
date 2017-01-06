@@ -1,0 +1,80 @@
+/**
+ * base/_headings.scss
+ */
+
+/* ==========================================================================
+   Headings
+   ========================================================================== */
+
+/**
+ * Base heading sizes
+ */
+
+%alpha,
+.alpha,
+h1,
+%beta,
+.beta,
+h2,
+%gamma,
+.gamma,
+h3,
+%delta,
+.delta,
+h4,
+%epsilon,
+.epsilon,
+h5,
+%zeta,
+.zeta,
+h6 {
+    font-family: $base-font-family;
+}
+
+%alpha,
+.alpha,
+h1 {
+  @include font-size(32px, 1);
+
+  @include av-mq(handheld-and-up) {
+    @include font-size(48px, 1);
+  }
+}
+
+%beta,
+.beta,
+h2, {
+  @include font-size(25px, 1);
+
+  @include av-mq(handheld-and-up) {
+    @include font-size(38px, 1);
+  }
+}
+
+%gamma,
+.gamma,
+h3, {
+  @include font-size(20px, 1);
+
+  @include av-mq(handheld-and-up) {
+    @include font-size(30px, 1);
+  }
+}
+
+%delta,
+.delta,
+h4 {
+
+}
+
+%epsilon,
+.epsilon,
+h5 {
+
+}
+
+%zeta,
+.zeta,
+h6 {
+
+}

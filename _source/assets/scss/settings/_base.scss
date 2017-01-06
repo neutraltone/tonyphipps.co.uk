@@ -10,22 +10,36 @@
  * High level base settings
  */
 
-$base-font-size:              18px;
-$base-line-height:            24px;
-$base-spacing-unit:           24px;
-$base-container-width:	      860px;
-$base-container-width-lrg:    1280px;
-$base-container-gutter:       $base-spacing-unit;
-$base-font:                   'Helvetica Neue', Helvetica, Arial, sans-serif;
-$base-anim-duration:          300ms;
-$base-anim-easing:            cubic-bezier(0.16, 0.68, 0.43, 0.99);
-$base-anim-easing-alt:        cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$base-font-size: 16px;
+$base-line-height: 24px;
+$base-spacing-unit: 24px;
+$base-gutter: $base-spacing-unit;
+$base-container-width: 860px;
+$base-container-gutter: $base-spacing-unit;
+$base-font: 'europa', 'Quicksand', 'Helvetica Neue', Helvetica, Arial;
+$base-anim-duration: 300ms;
+$base-anim-easing: cubic-bezier(0.16, 0.68, 0.43, 0.99);
+$base-anim-easing-alt: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
+
+/**
+ * Backgrounds
+ */
+
+$background-image: '../img/background--body.jpg';
+
+
+/**
+ * Logo
+ */
+
+$logo-size:       160px;
+$logo-size--half: $logo-size / 2;
 
 
 /**
  * Typography
  */
 
-$font-primary:   'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-secondary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-primary: $base-font;
+$font-secondary: 'europa', 'Quicksand', 'Helvetica Neue', Helvetica, Arial;
