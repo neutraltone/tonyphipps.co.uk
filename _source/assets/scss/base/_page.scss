@@ -13,7 +13,9 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
 }
 
 html {
@@ -22,7 +24,6 @@ html {
   overflow-y: scroll;
   color: color(text, medium);
   font: 400 #{($base-font-size/16px)*1em}/#{$base-line-height/$base-font-size} $base-font;
-  box-sizing: border-box;
 }
 
 html,
