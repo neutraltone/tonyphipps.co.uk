@@ -1,0 +1,40 @@
+/**
+ * tools/_ratio-box.scss
+ */
+
+/* ==========================================================================
+   Ratio box
+   ========================================================================== */
+
+/**
+ * A simple mixin to quickly generate boxes which scale and maintain an their
+ * aspect ratio.
+ *
+ * @param {Ratio} $ratio - [1/1] - Block element aspect ratio.
+ *
+ * Usage:
+ *
+ * .widescreen {
+ *   @include ratio-box(16/9);`
+ * }
+ */
+
+@mixin ratio-box($ratio: 1 / 1) {
+  position: relative;
+  overflow: hidden;
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before {
+    display: block;
+    padding-top: (1 / $ratio) * 100%;
+    height: 0;
+    content: '';
+  }
+}
