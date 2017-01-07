@@ -10,7 +10,10 @@
  * Base paragraph styles
  */
 
+%p,
 p {
+  font-family: $font-primary;
+
   @include font-size($base-font-size, 1.375);
 
   @include av-mq(handheld-and-up) {

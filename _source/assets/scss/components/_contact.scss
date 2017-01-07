@@ -1,0 +1,47 @@
+/**
+ * components/_contact.scss
+ */
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Contact form component
+ */
+
+.contact {
+  margin: 0 auto;
+  color: color(text, light);
+
+  @include av-mq(lap-and-up) {
+    max-width: 520px;
+  }
+
+  &__title {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  &.is-active &__title {
+    animation: rubberBand;
+    animation-duration: 1s;
+    animation-delay: ($base-anim-duration * 6);
+    animation-fill-mode: both;
+  }
+
+  &__form {
+    margin: 0 auto;
+  }
+
+  .no-js & {
+    position: relative;
+  }
+}

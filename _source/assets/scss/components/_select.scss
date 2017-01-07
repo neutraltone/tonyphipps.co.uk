@@ -1,0 +1,46 @@
+/**
+ * components/_select.scss
+ */
+
+/* ==========================================================================
+   Select
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Select dropdown component
+ */
+
+.select {
+  position: relative;
+  background-color: color(bw, white);
+
+  &__input {
+    @extend %input;
+
+    position: relative;
+    z-index: 2;
+    border-radius: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: ($base-spacing-unit / 2);
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: color(brand, secondary);
+    width: 10px;
+    height: 10px;
+    content: '';
+  }
+}

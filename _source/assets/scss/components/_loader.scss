@@ -1,6 +1,24 @@
+/**
+ * components/_loader.scss
+ */
+
+/* ==========================================================================
+   Loader
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Page loading component
+ */
+
 .loading {
   display: none;
-
   position: absolute;
   top: 0;
   left: 0;

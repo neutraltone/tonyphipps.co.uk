@@ -1,0 +1,67 @@
+/**
+ * components/_buttons.scss
+ */
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Base button styles
+ */
+
+.btn {
+  @extend %p;
+
+  display: block;
+  transition:
+    opacity 300ms linear,
+    color 300ms linear,
+    border-color 300ms linear;
+  outline: none;
+  padding: 1rem 2.5rem;
+  color: #fff;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include av-mq(lap-and-up) {
+    padding: 1.5rem 3.5rem;
+  }
+}
+
+
+/**
+ * Button style modifiers
+ */
+
+.btn--primary {
+  float: right;
+  border: 3px solid #337686;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    border-color: #fff;
+  }
+}
+
+.btn--bare {
+  float: left;
+  border: none;
+  background-color: transparent;
+  padding-left: 0;
+  color: #337686;
+
+  &:focus {
+    opacity: .5;
+  }
+}

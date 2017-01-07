@@ -1,0 +1,31 @@
+/**
+ * components/_form.scss
+ */
+
+/* ==========================================================================
+   Form
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Form components
+ */
+
+.form {
+  overflow: hidden;
+
+  &__field {
+    margin: 0 0 (($base-spacing-unit / 4) * 3) 0;
+  }
+
+  &__label {
+    display: block;
+    margin: 0 0 ($base-spacing-unit / 2) 0;
+  }
+}

@@ -18,20 +18,19 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow-x: hidden;
-  overflow: hidden;
-  overflow-y: scroll;
-  color: color(text, medium);
-  font: 400 #{($base-font-size/16px)*1em}/#{$base-line-height/$base-font-size} $base-font;
-}
-
 html,
 body {
   position: relative;
   margin: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  color: color(text, medium);
+  font: 400 #{($base-font-size/16px)*1em}/#{$base-line-height/$base-font-size} $font-primary;
 }
 
 

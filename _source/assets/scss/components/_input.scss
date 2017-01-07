@@ -1,0 +1,48 @@
+/**
+ * components/_input.scss
+ */
+
+/* ==========================================================================
+   Inputs
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Input form component
+ */
+
+%input,
+.input {
+  @extend %p;
+
+  display: block;
+  border: 0;
+  border-left: 4px solid color(bw, white);
+  background-color: color(bw, white);
+  padding: ($base-spacing-unit / 2) ($base-spacing-unit / 2) ($base-spacing-unit / 2) (($base-spacing-unit / 2) - 4);
+  width: 100%;
+  color: color(brand, secondary);
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.error {
+    border-color: color(brand, primary);
+  }
+
+  &.success {
+    border-color: color(context, success);
+  }
+}
