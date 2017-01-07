@@ -3,8 +3,8 @@
  */
 
 // Global selectors
-const modal = document.querySelectorAll('.js-modal');
-const contact = document.querySelectorAll('.js-contact');
+const modal = Array.from(document.querySelectorAll('.js-modal'));
+const contact = Array.from(document.querySelectorAll('.js-contact'));
 
 /**
  * Functions
@@ -14,8 +14,8 @@ const contact = document.querySelectorAll('.js-contact');
 const toggleModal = (e) => {
   e.preventDefault();
 
-  modal.classList.toggle('is-active');
-  contact.classList.toggle('is-active');
+  modal.forEach(modal => modal.classList.toggle('is-active'));
+  contact.forEach(contact => contact.classList.toggle('is-active'));
 };
 
 
@@ -29,5 +29,3 @@ const closeModal = Array.from(document.querySelectorAll('.js-modal-close'));
 
 openModal.forEach(openModal => openModal.addEventListener('click', toggleModal, false));
 closeModal.forEach(closeModal => closeModal.addEventListener('click', toggleModal, false));
-
-
