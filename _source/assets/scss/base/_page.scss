@@ -27,7 +27,9 @@ body {
 }
 
 html {
-  background-color: color(brand, secondary);
+  &.home {
+    background-color: color(brand, secondary);
+  }
 }
 
 body {
