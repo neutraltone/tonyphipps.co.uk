@@ -8,6 +8,7 @@ TODO
 * Design portfolio listing page
 * Design portfolio listing page maybe based on Tufte CSS
 * Integrate AJAX loading with fallback to site
+* Continuous integration and digital ocean setup
 
 
 Disqus notes
