@@ -24,11 +24,15 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  overflow-y: scroll;
+}
+
+html {
+  background-color: color(brand, secondary);
 }
 
 body {
+  overflow: hidden;
+  overflow-y: scroll;
   color: color(text, medium);
   font: 400 #{($base-font-size/16px)*1em}/#{$base-line-height/$base-font-size} $font-primary;
 }

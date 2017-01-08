@@ -26,14 +26,15 @@ $base-anim-easing-alt: cubic-bezier(0.175, 0.885, 0.32, 1.275);
  * Backgrounds
  */
 
-$background-image: '../img/background--body.jpg';
+$background-image: '/assets/img/background__body.jpg';
+$background-image--small: '/assets/img/background__body--small.jpg';
 
 
 /**
  * Logo
  */
 
-$logo-size:       160px;
+$logo-size: 160px;
 $logo-size--half: $logo-size / 2;
 
 

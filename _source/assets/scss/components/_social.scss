@@ -18,12 +18,14 @@
  */
 
 .social {
+  display: flex;
+  justify-content: flex-start;
   margin: 2.4rem 0 0;
   padding: 0;
   list-style: none;
 
   &__item {
-    display: inline-block;
+    //display: inline-block;
   }
 
   &__link {
