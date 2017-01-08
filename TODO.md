@@ -1,8 +1,17 @@
 TODO
 ====
 
-Add Disqus
-----------
+* Get multiblog working
+* Design header and footer for blog + portfolio
+* Add and customise Tufte CSS for blog post page (https://edwardtufte.github.io/tufte-css/)
+* Design blog listings page
+* Design portfolio listing page
+* Design portfolio listing page maybe based on Tufte CSS
+* Integrate AJAX loading with fallback to site
+
+
+Disqus notes
+------------
 
 Place the following code where you'd like Disqus to load:
 
