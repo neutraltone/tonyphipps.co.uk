@@ -1,5 +1,16 @@
 ---
-layout: blog
-title: "Blog"
-description: "This is the blog page"
+layout: default
+title: Blog
 ---
+
+<ul>
+  {% for post in site.posts %}
+  <li>
+		<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+		<p class="meta">Date: {{ post.date }}</p>
+		<div class="entry">
+			{{ post.content | strip_html | truncatewords: 100 }}
+		</div>
+  </li>
+  {% endfor %}
+</ul>

@@ -1,5 +1,16 @@
 ---
 layout: portfolio
-title: "Portfolio"
+title: Portfolio
+permalink: /portfolio/
 description: "This is a portfolio"
 ---
+
+<ul>
+  {% for post in site.portfolio %}
+  <li>
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p>Date: {{ post.date }}</p>
+    <p>{{ post.content | strip_html | truncatewords: 100 }}</p>
+  </li>
+  {% endfor %}
+</ul>
