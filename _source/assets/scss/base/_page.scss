@@ -36,7 +36,7 @@ body {
   overflow: hidden;
   overflow-y: scroll;
   color: color(text, medium);
-  font: 400 #{($base-font-size/16px)*1em}/#{$base-line-height/$base-font-size} $font-primary;
+  font: 400 #{($base-font-size/$base-font-size)*1em}/#{$base-line-height/$base-font-size} $font-primary;
 }
 
 

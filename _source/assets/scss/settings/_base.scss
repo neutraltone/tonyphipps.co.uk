@@ -10,11 +10,11 @@
  * High level base settings
  */
 
-$base-font-size: 16px;
-$base-line-height: 24px;
-$base-spacing-unit: 24px;
+$base-font-size: 24px;
+$base-line-height: 36px;
+$base-spacing-unit: 1rem;
 $base-gutter: $base-spacing-unit;
-$base-container-width: 860px;
+$base-container-width: 50rem;
 $base-container-gutter: $base-spacing-unit;
 $base-font: 'europa', 'Quicksand', 'Helvetica Neue', Helvetica, Arial;
 $base-anim-duration: 300ms;

@@ -26,15 +26,11 @@
     color 300ms linear,
     border-color 300ms linear;
   outline: none;
-  padding: 1rem 2.5rem;
+  padding: 1em 2.333em;
   color: #fff;
 
   &:hover {
     cursor: pointer;
-  }
-
-  @include av-mq(lap-and-up) {
-    padding: 1.5rem 3.5rem;
   }
 }
 
@@ -45,7 +41,7 @@
 
 .btn--primary {
   float: right;
-  border: 3px solid #337686;
+  border: 0.125em solid #337686;
   background-color: transparent;
 
   &:hover,
@@ -62,6 +58,6 @@
   color: #337686;
 
   &:focus {
-    opacity: .5;
+    opacity: 0.5;
   }
 }

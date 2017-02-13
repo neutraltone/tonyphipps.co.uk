@@ -20,13 +20,9 @@
 .social {
   display: flex;
   justify-content: flex-start;
-  margin: 2.4rem 0 0;
+  margin: 1.5em 0 0;
   padding: 0;
   list-style: none;
-
-  &__item {
-    //display: inline-block;
-  }
 
   &__link {
     display: block;
@@ -61,5 +57,6 @@
     transform: translate(-50%, 0);
     background: transparentize(color(bw, black), 0.5);
     padding: 5px 10px;
+    font-size: 0.75rem;
   }
 }

@@ -34,31 +34,19 @@ h6 {
 %alpha,
 .alpha,
 h1 {
-  @include font-size(32px, 1);
-
-  @include av-mq(handheld-and-up) {
-    @include font-size(48px, 1);
-  }
+  font-size: 2em;
 }
 
 %beta,
 .beta,
 h2, {
-  @include font-size(25px, 1);
 
-  @include av-mq(handheld-and-up) {
-    @include font-size(38px, 1);
-  }
 }
 
 %gamma,
 .gamma,
 h3, {
-  @include font-size(20px, 1);
 
-  @include av-mq(handheld-and-up) {
-    @include font-size(30px, 1);
-  }
 }
 
 %delta,

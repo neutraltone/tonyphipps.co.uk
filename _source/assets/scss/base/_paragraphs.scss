@@ -13,12 +13,6 @@
 %p,
 p {
   font-family: $font-primary;
-
-  @include font-size($base-font-size, 1.375);
-
-  @include av-mq(handheld-and-up) {
-    @include font-size($base-font-size * 1.5, 1.375);
-  }
 }
 
 
@@ -29,5 +23,5 @@ p {
 
 %lede,
 .lede {
-  @include font-size(18px, (32px / 18px));
+  @include font-size($base-font-size * 1.5);
 }

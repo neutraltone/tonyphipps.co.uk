@@ -1,0 +1,33 @@
+/**
+ * objects/_container.scss
+ */
+
+/* ==========================================================================
+   Container
+   ========================================================================== */
+
+/**
+ * Contain elements in an arbitrary width
+ */
+
+%container,
+.container {
+  margin-right: auto;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  padding-right: $base-gutter;
+  padding-left: $base-gutter;
+  max-width: $base-container-width;
+}
+
+
+/**
+ * Full-width modifier
+ */
+
+%container--full,
+.container--full {
+  padding-right: 0;
+  padding-left: 0;
+  max-width: none;
+}
