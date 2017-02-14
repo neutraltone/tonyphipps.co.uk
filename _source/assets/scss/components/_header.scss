@@ -22,6 +22,7 @@ $border-color: transparentize(color(bw, black), 0.94);
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2em;
   border-bottom: 1px solid $border-color;
-  padding: 4em 0 2em;
+  padding: 4em 0 0;
 }

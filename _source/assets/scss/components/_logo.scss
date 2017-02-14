@@ -19,11 +19,33 @@
 
 .logo {
   display: block;
+  position: relative;
+  transform-style: preserve-3d;
   border: 0;
 
   &__img {
     display: block;
+    transition: transform double($base-anim-duration) $base-anim-easing;
     width: $logo-size;
     height: $logo-size;
+    backface-visibility: hidden;
+
+    &--back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotateY(0.5turn);
+      z-index: 1;
+    }
+  }
+
+  &--rotate:hover {
+    .logo__img {
+      transform: rotateY(0.5turn);
+
+      &--back {
+        transform: rotateY(0turn);
+      }
+    }
   }
 }
