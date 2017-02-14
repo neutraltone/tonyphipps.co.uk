@@ -74,6 +74,7 @@ gulp.task('serve', [
   'modernizr',
   'images',
   'svg-sprite',
+  'favicon',
 ], () => {
   browserSync.init({
     server: options.dest.dist,
@@ -271,6 +272,17 @@ gulp.task('svg-sprite', () => {
     .pipe(browserSync.stream());
 });
 
+/**
+ * Favicon
+ * -------
+ */
+
+gulp.task('favicon', () => {
+  gulp.src(options.src.favicon)
+    .pipe(gulp.dest(options.dest.img));
+});
+
+
 
 /**
  * Jekyll
@@ -305,5 +317,6 @@ gulp.task('build', () => {
     'modernizr',
     'images',
     'svg-sprite',
+    'favicon',
   ]);
 });

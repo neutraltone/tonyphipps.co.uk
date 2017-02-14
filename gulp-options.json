@@ -4,6 +4,7 @@
     "scss": "_source/assets/scss/**/*.scss",
     "img": "_source/assets/img/{,*/}*.{jpg,jpeg,png,gif,svg}",
     "sprite": "_source/assets/icons/{,*/}*.svg",
+    "favicon": "_source/assets/favicon/favicon.ico",
     "js": "_source/assets/js/**/*.js",
     "vendor": "_source/assets/js/vendor/**/*.js"
   },
