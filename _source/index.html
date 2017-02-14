@@ -11,14 +11,14 @@ layout: default
     <p>Hello. I am Tony, a Front-end Developer from the United Kingdom. Check out my <a href="/portfolio">portfolio</a> for an insight into my work or perhaps you'd rather peruse the somewhat sporadic selection of topics in my <a href="/blog">blog</a>. If you would like to work with me, feel free to <a href="#contact" class="js-modal-open">get in touch</a>.</p>
     <ul class="social">
       {% for network in site.social %}
-        <li class="social__item">
-          <a class="social__link" href="{{ network.url }}{{ network.username }}">
-            <svg class="icon  icon--social">
-              <use xlink:href="#social-{{ network.title }}">
-            </svg>
-            <span class="social__label">{{ network.title }}</span>
-          </a>
-        </li>
+      <li class="social__item">
+        <a class="social__link" href="{{ network.url }}{{ network.username }}">
+          <svg class="icon  icon--social">
+            <use xlink:href="#social-{{ network.title }}">
+          </svg>
+          <span class="social__label">{{ network.title }}</span>
+        </a>
+      </li>
       {% endfor %}
     </ul>
   </div>
