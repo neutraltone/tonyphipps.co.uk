@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js {% if page.url == "/" %}  is-home{% endif %}" lang="en">
 {% include head.html %}
-<body {% if page.url == "/" %}class="is-home"{% endif %}>
+<body>
   {{ content }}
   {% include loading.html %}
   {% include scripts.html %}
