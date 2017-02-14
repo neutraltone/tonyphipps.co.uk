@@ -23,17 +23,7 @@
 
   &__img {
     display: block;
-    width: ($logo-size) / 1.80;
-    height: ($logo-size) / 1.80;
-
-    @include av-mq(handheld-and-up) {
-      width: ($logo-size) / 1.25;
-      height: ($logo-size) / 1.25;
-    }
-
-    @include av-mq(desk) {
-      width: $logo-size;
-      height: $logo-size;
-    }
+    width: $logo-size;
+    height: $logo-size;
   }
 }

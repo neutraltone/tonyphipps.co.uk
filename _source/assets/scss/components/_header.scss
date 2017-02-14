@@ -10,7 +10,7 @@
  * Declare local vars (only used here)
  */
 
-// $example;
+$border-color: transparentize(color(bw, black), 0.94);
 
 
 /**
@@ -22,4 +22,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid $border-color;
+  padding: 4em 0 2em;
 }

@@ -1,0 +1,17 @@
+/**
+ * objects/_list-bare.scss
+ */
+
+/* ==========================================================================
+   List bare
+   ========================================================================== */
+
+/**
+ * Remove natural styling of lists
+ */
+
+%list-bare,
+.list-bare {
+  list-style: none;
+  padding-left: 0;
+}
