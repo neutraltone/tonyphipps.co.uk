@@ -21,9 +21,9 @@ $colors: (
     dark: #333,
     light: #fff
   ),
-  bw: (
-    black: #000,
-    white: #fff
+  border: (
+    dark: #333,
+    light: #eee
   ),
   context: (
     success: #34bf2a,
@@ -32,6 +32,10 @@ $colors: (
   gradient: (
     start: rgba(0, 30, 100, 0.5),
     end: rgba(0, 100, 30, 0.4)
+  ),
+  bw: (
+    black: #000,
+    white: #fff
   ),
   social: (
     facebook: #365397,

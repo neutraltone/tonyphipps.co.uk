@@ -1,9 +1,9 @@
 /**
- * components/_header.scss
+ * components/_footer.scss
  */
 
 /* ==========================================================================
-   Header
+   Footer
    ========================================================================== */
 
 /**
@@ -14,15 +14,19 @@ $border-color: color(border, light);
 
 
 /**
- * Header
+ * Footer
  */
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2em;
-  border-bottom: 1px solid $border-color;
-  padding: 4em 0 0;
+.footer {
+  margin-top: 2em;
+  border-top: 1px solid $border-color;
+  padding: 2em 0 4em;
+
+  & > :first-child {
+    margin: 0;
+  }
+
+  & > :last-child {
+    margin: 0;
+  }
 }
