@@ -1,0 +1,25 @@
+/**
+ * components/_header.scss
+ */
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Header
+ */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

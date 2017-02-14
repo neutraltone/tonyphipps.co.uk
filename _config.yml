@@ -31,16 +31,16 @@ disqus_account: tonyphipps
 social:
   - title: github
     username: neutraltone
-    url: https://github.com/neutraltone
+    url: https://github.com/
   - title: codepen
     username: neutraltone
-    url: https://codepen.io/neutraltone
+    url: https://codepen.io/
   - title: twitter
     username: neutraltone
-    url: https://twitter.com/neutraltone
+    url: https://twitter.com/
   - title: dribbble
     username: neutraltone
-    url: https://dribbble.com/neutraltone
+    url: https://dribbble.com/
 
 # Build settings
 markdown: kramdown

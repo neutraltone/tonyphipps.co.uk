@@ -11,13 +11,23 @@
  */
 
 a {
-  transition: border-color $base-anim-duration ease-in-out;
-  border-bottom: 1px dashed color(bw, white);
+  transition: border-color $base-anim-duration $base-anim-easing;
+  border-bottom: 1px dashed color(brand, primary);
   padding-bottom: 2px;
   text-decoration: none;
-  color: color(bw, white);
+  color: color(brand, primary);
 
   &:hover {
-    border-bottom-color: rgba(0,0,0,0);
+    border-bottom-color: transparent;
+  }
+
+  .is-home & {
+    border-bottom-color: color(bw, white);
+    padding-bottom: 2px;
+    color: color(bw, white);
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
   }
 }

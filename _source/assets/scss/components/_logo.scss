@@ -19,17 +19,25 @@
 
 .logo {
   display: block;
-  margin: 2rem 0;
-  width: ($logo-size) / 1.80;
-  height: ($logo-size) / 1.80;
+  border: 0;
 
-  @include av-mq(handheld-and-up) {
-    width: ($logo-size) / 1.25;
-    height: ($logo-size) / 1.25;
-  }
+  &__img {
+    display: block;
+    width: ($logo-size) / 1.80;
+    height: ($logo-size) / 1.80;
 
-  @include av-mq(desk) {
-    width: $logo-size;
-    height: $logo-size;
+    @include av-mq(handheld-and-up) {
+      width: ($logo-size) / 1.25;
+      height: ($logo-size) / 1.25;
+    }
+
+    @include av-mq(desk) {
+      width: $logo-size;
+      height: $logo-size;
+    }
+
+    .is-home & {
+      margin: 2rem 0;
+    }
   }
 }
