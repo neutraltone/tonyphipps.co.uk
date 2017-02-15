@@ -1,32 +1,24 @@
 /**
- * components/_icons.scss
+ * components/_comments.scss
  */
 
 /* ==========================================================================
-   Icons
+   Diqus comment container
    ========================================================================== */
 
 /**
  * Declare local vars (only used here)
  */
 
-// $example;
+$border-color: color(border, light);
 
 
 /**
- * Base icon styles
+ * Comments
  */
 
-.icon {
-  fill: currentColor;
-}
-
-
-/**
- * Icon modifiers
- */
-
-.icon--social {
-  width: 2em;
-  height: 2em;
+.comments {
+  margin-top: 2em;
+  border-top: 1px solid $border-color;
+  padding-top: 2em;
 }

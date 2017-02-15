@@ -27,7 +27,7 @@ twitter_username: "@neutraltone"
 google_analytics: "UA-15367962-2"
 disqus_account: tonyphipps
 
-# Social networks usernames
+# Social networks
 social:
   - title: github
     username: neutraltone
@@ -41,6 +41,14 @@ social:
   - title: dribbble
     username: neutraltone
     url: https://dribbble.com/
+
+# Social shares
+share:
+  - title: twitter
+    url: https://twitter.com/share
+  - title: facebook
+    url: https://facebook.com/sharer/sharer.php
+    js: onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;"
 
 # Build settings
 markdown: kramdown

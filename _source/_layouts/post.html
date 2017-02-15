@@ -13,5 +13,7 @@ layout: page
 
   {% include blog-footer.html %}
 
-  {% include comments.html %}
+  {% if page.comments == true %}
+    {% include comments.html %}
+  {% endif %}
 </article>

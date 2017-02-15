@@ -1,31 +1,24 @@
 <footer class="blog-footer">
   <div class="blog-footer__date">
-    Posted on<br>
+    <strong>Posted on</strong><br>
     Jan 20
   </div>
 
   <div class="blog-footer__author">
-    Written by<br>
+    <strong>Written by</strong><br>
     Tony Phipps
   </div>
 
-  <ul>
-    <li>
-      <a class="twitter" href="https://twitter.com/share">
-        <span class="icon-twitter-circled"></span>
-        <p class="visuallyhidden">Tweet this post</p>
+  <ul class="blog-footer__social-share  social">
+    {% for network in site.share %}
+    <li class="social__item">
+      <a class="social__link" href="{{ network.url }}"{% if network.js  %} {{ network.js }}{% endif %}>
+        <svg class="icon  icon--social">
+          <use xlink:href="#social--{{ network.title }}">
+        </svg>
+        <span class="social__label">Share on {{ network.title | capitalize }}</span>
       </a>
     </li>
-    <li>
-      <a class="facebook" href="#" onclick="
-        window.open(
-          'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-          'facebook-share-dialog',
-          'width=626,height=436');
-        return false;">
-        <span class="icon-facebook-circled"></span>
-        <p class="visuallyhidden">Share this post on Facebook</p>
-      </a>
-    </li>
+    {% endfor %}
   </ul>
 </footer>

@@ -1,0 +1,36 @@
+/**
+ * components/_blog-footer.scss
+ */
+
+/* ==========================================================================
+   Blog footer
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+$border-color: color(border, light);
+
+
+/**
+ * Blog footer
+ */
+
+.blog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2em;
+  border-top: 1px solid $border-color;
+  padding-top: 2em;
+
+  &__date,
+  &__author {
+    margin: 0 1em 0 0;
+  }
+
+  &__social-share {
+    margin-left: auto;
+  }
+}
