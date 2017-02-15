@@ -1,9 +1,9 @@
 /**
- * components/_blog-listing.scss
+ * components/_listing.scss
  */
 
 /* ==========================================================================
-   Blog listing
+   Listing
    ========================================================================== */
 
 /**
@@ -14,10 +14,10 @@
 
 
 /**
- * Blog listing
+ * Listing
  */
 
-.blog-listing {
+.listing {
   @extend %list-bare;
 
   margin: 0;

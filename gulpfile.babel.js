@@ -85,8 +85,8 @@ gulp.task('serve', [
   gulp.watch(options.src.sprite, ['svg-sprite']);
   gulp.watch([
     path.join(options.src.src, '*.html'),
-    path.join(options.src.src, '*/*.html'),
-    path.join(options.src.src, '*/*.md'),
+    path.join(options.src.src, '/**/*.html'),
+    path.join(options.src.src, '/**/*.md'),
   ], () => {
     runSequence('jekyll',
       [
