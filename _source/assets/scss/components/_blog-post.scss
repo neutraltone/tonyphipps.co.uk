@@ -1,0 +1,31 @@
+/**
+ * components/_blog-post.scss
+ */
+
+/* ==========================================================================
+   Blog post
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Blog post
+ */
+
+.blog-post {
+  @extend %list-bare;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__meta {
+    margin: 0.5em 0 0;
+    color: color(text, medium);
+  }
+}

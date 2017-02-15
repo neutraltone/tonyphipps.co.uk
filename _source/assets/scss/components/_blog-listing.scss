@@ -1,0 +1,36 @@
+/**
+ * components/_blog-listing.scss
+ */
+
+/* ==========================================================================
+   Blog listing
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Blog listing
+ */
+
+.blog-listing {
+  @extend %list-bare;
+
+  margin: 0;
+
+  &__item {
+    margin: 2em 0;
+  }
+
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
