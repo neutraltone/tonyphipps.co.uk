@@ -1,0 +1,38 @@
+/**
+ * components/_project-post.scss
+ */
+
+/* ==========================================================================
+   Project post
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Project post
+ */
+
+.project-post {
+  @extend %list-bare;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0.5em 0 0;
+    color: color(text, medium);
+  }
+
+  &__tags-icon {
+    margin-right: 0.5em;
+  }
+}

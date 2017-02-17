@@ -3,9 +3,17 @@ layout: page
 ---
 
 <h1>{{ page.title }}</h1>
-{% if page.subtitle %}
-<h2 class="subheading">{{ page.subtitle }}</h2>
+{% if page.tags.size > 0 %}
+<div class="tags">
+  <svg class="tags__icon  icon  icon--tags">
+    <use xlink:href="#tags">
+  </svg>
+  <ul class="tags__list">
+    {% for tag in page.tags %}
+      <li class="tags__tag"><a href="#">{{ tag | capitalize }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
 {% endif %}
-<p class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</p>
 
 {{ content }}

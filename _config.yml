@@ -50,6 +50,12 @@ share:
     url: https://facebook.com/sharer/sharer.php
     js: onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;"
 
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
@@ -59,9 +65,4 @@ permalink: pretty
 gems:
   - jekyll-feed
 exclude: ["node_modules", "gulpfile.js", "package.json", "README.md", "assets"]
-
-collections:
-  portfolio:
-    output: true
-    permalink: /portfolio/:path/
 

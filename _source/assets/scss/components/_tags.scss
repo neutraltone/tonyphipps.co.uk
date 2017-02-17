@@ -1,0 +1,53 @@
+/**
+ * components/_tags.scss
+ */
+
+/* ==========================================================================
+   Tags
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Tags
+ */
+
+.tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0.5em 0 0;
+  color: color(text, medium);
+
+  &__icon {
+    margin-right: 0.5em;
+  }
+
+  &__list {
+    @extend %list-bare;
+
+    margin: 0;
+    color: color(brand, primary);
+  }
+
+  &__tag {
+    display: inline-block;
+
+    &:not(:last-child):not(:nth-last-child(2)) {
+      &:after {
+        content: ", ";
+      }
+    }
+
+    &:nth-last-child(2) {
+      &:after {
+        content: " & ";
+      }
+    }
+  }
+}
