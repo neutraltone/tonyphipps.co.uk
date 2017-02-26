@@ -1,0 +1,20 @@
+---
+layout: page
+title: Contact
+---
+
+<h1>Contact me</h1>
+<p>I am always happy to hear from people so if you would like to work with me you can contact me at <a href="mailto:tonyphipps@gmail.com">tonyphipps@gmail.com</a>, or failing that, through one of the many social networks listed below.</p>
+<ul class="social">
+  {% for network in site.social %}
+  <li class="social__item">
+    <a class="social__link" href="{{ network.url }}{{ network.username }}">
+      <svg class="icon  icon--social">
+        <use xlink:href="#social--{{ network.title }}">
+      </svg>
+      <span class="social__label">{{ network.title | capitalize }}</span>
+    </a>
+  </li>
+  {% endfor %}
+  </ul>
+  <p>If you are looking for more information about my skills and work then feel free to take a look at my <a href="https://github.com/neutraltone/CV">CV</a> over on GitHub.</p>
