@@ -291,7 +291,7 @@ gulp.task('favicon', () => {
  */
 
 gulp.task('jekyll', (gulpCallBack) => {
-  const jekyll = spawn('jekyll', ['build', '--incremental'], {
+  const jekyll = spawn('jekyll', ['build'], {
     stdio: 'inherit',
   });
 
