@@ -1,0 +1,33 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+description: "This is a portfolio"
+---
+
+<ul class="listing">
+  {% for post in site.projects %}
+  <li class="listing__item">
+    <article class="project-post">
+      <div class="project-post__header">
+        <h1 class="project-post__title"><a href="{{ post.external_url }}" rel="external">{{ post.title }}</a></h1>
+        <div>
+          <p>{{ post.content }}</p>
+        </div>
+        {% if post.tags.size > 0 %}
+        <div class="tags">
+          <svg class="tags__icon  icon  icon--tags">
+            <use xlink:href="#tags">
+          </svg>
+          <ul class="tags__list">
+            {% for tag in post.tags %}
+              <li class="tags__tag"><a href="#">{{ tag | capitalize }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </article>
+  </li>
+  {% endfor %}
+</ul>

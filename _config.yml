@@ -55,6 +55,9 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
 
 # Build settings
 markdown: kramdown
