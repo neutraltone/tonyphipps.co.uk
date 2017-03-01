@@ -1,0 +1,27 @@
+/**
+ * components/_project-feature.scss
+ */
+
+/* ==========================================================================
+   Project feature
+   ========================================================================== */
+
+/**
+ * Declare local vars (only used here)
+ */
+
+// $example;
+
+
+/**
+ * Project feature
+ */
+
+.project-feature {
+  margin: 1.5em 0;
+
+  &__illustration {
+    display: block;
+    max-width: 480px;
+  }
+}
