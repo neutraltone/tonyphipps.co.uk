@@ -23,9 +23,7 @@ source: _source
 baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
 url: "http://tonyphipps.co.uk" # the base hostname & protocol for your site
 
-twitter_username: "@neutraltone"
-google_analytics: "UA-15367962-2"
-disqus_account: tonyphipps
+author: Tony Phipps
 
 # Social networks
 social:
