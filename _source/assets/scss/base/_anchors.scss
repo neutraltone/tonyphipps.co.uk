@@ -13,13 +13,13 @@
 a {
   transition:
     color $base-anim-duration $base-anim-easing,
-    border-color $base-anim-duration $base-anim-easing;
-  border-bottom: 1px dashed color(brand, primary);
+    border $base-anim-duration $base-anim-easing;
+  border-bottom: 0.12em solid color(brand, primary);
   text-decoration: none;
   color: color(brand, primary);
 
   &:hover {
-    border-bottom-color: transparent;
+    border-bottom: 0 solid transparent;
   }
 
   .is-home & {
@@ -31,4 +31,24 @@ a {
       border-bottom-color: transparent;
     }
   }
+}
+
+
+/**
+ * Style external links
+ */
+
+[href^="http"]:not([href*="codepen.io"])::after {
+  display: inline-block;
+  margin-left: 0.2em;
+  background-image: url(/assets/img/icon__external-link.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 0.55em;
+  height: 1em;
+  overflow: hidden;
+  text-indent: 1em;
+  white-space: nowrap;
+  content: '(external link)';
 }

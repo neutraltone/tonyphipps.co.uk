@@ -6,4 +6,7 @@ external_url: https://github.com/neutraltone/gulp-boilerplate
 tags: [gulp, boilerplate, open source]
 ---
  
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+A gulp ITCSS Sass based boilerplate for individuals and teams. Built in features
+include Linting and concatenating JS files. Compiles Sass files and
+automatically adds vendor prefixes. Exports both minified JS and CSS files with 
+header info. Generates SVG sprites.

@@ -53,6 +53,10 @@
         }
       }
     }
+
+    &[href^="http"]:not([href*="codepen.io"])::after {
+      display: none;
+    }
   }
 
   &__label {
