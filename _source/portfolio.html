@@ -12,14 +12,15 @@ description: "This is a portfolio"
       <div class="project-post__header">
         <h1 class="project-post__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
         <div class="project-feature">
+          <img
+            srcset="/assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured.png 1x,
+                    /assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured@2x.png 2x,
+                    /assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured@3x.png 3x,
+                    /assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured@4x.png 4x"
+            src="/assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured.png"
+            alt="">
+        </div>
       </div>
-      <img
-        srcset="/assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured.png 1x,
-                /assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured@2x.png 2x,
-                /assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured@3x.png 3x,
-                /assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured@4x.png 4x"
-        src="/assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured.png"
-        alt="">
       <div>
         <p>{{ post.content | strip_html | truncatewords: 32 }}</p>
       </div>
