@@ -3,6 +3,9 @@ layout: page
 ---
 
 <h1>{{ page.title }}</h1>
+
+{{ content }}
+
 {% if page.tags.size > 0 %}
 <div class="tags">
   <svg class="tags__icon  icon  icon--tags">
@@ -10,10 +13,8 @@ layout: page
   </svg>
   <ul class="tags__list">
     {% for tag in page.tags %}
-      <li class="tags__tag"><a href="#">{{ tag | capitalize }}</a></li>
+      <li class="tags__tag"><a href="#">{{ tag }}</a></li>
     {% endfor %}
   </ul>
 </div>
 {% endif %}
-
-{{ content }}

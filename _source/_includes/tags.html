@@ -1,0 +1,12 @@
+{% if post.tags.size > 0 %}
+<div class="tags">
+  <svg class="tags__icon  icon  icon--tags">
+    <use xlink:href="#tags">
+  </svg>
+  <ul class="tags__list">
+    {% for tag in post.tags %}
+      <li class="tags__tag"><a href="#">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

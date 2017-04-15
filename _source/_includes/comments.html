@@ -1,14 +1,14 @@
-{% if site.disqus_account %}
+{% if site.disqus %}
 <aside class="comments">
   <div id="disqus">
-    <script id="dsq-count-scr" src="//{{ site.disqus_account }}.disqus.com/count.js" async></script>
+    <script id="dsq-count-scr" src="//{{ site.disqus }}.disqus.com/count.js" async></script>
 
     <div id="disqus_thread"></div>
 
     <script>
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
-    s.src = '//{{ site.disqus_account }}.disqus.com/embed.js';
+    s.src = '//{{ site.disqus }}.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
@@ -18,3 +18,4 @@
   </div>
 </aside>
 {% endif %}
+                                

@@ -25,6 +25,9 @@ url: "http://tonyphipps.co.uk" # the base hostname & protocol for your site
 
 author: Tony Phipps
 
+# Comments
+disqus: tonyphipps
+
 # Social networks
 social:
   - title: github

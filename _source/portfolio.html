@@ -12,24 +12,18 @@ description: "This is a portfolio"
       <div class="project-post__header">
         <h1 class="project-post__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
         <div class="project-feature">
-
-        </div>
-        <div>
-          <p>{{ post.content | strip_html | truncatewords: 32 }}</p>
-        </div>
-        {% if post.tags.size > 0 %}
-        <div class="tags">
-          <svg class="tags__icon  icon  icon--tags">
-            <use xlink:href="#tags">
-          </svg>
-          <ul class="tags__list">
-            {% for tag in post.tags %}
-              <li class="tags__tag"><a href="#">{{ tag | capitalize }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endif %}
       </div>
+      <img
+        srcset="/assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured.png 1x,
+                /assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured@2x.png 2x,
+                /assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured@3x.png 3x,
+                /assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured@4x.png 4x"
+        src="/assets/img/portfolio/{{ post.title | slugify }}/{{ post.title | slugify }}-featured.png"
+        alt="">
+      <div>
+        <p>{{ post.content | strip_html | truncatewords: 32 }}</p>
+      </div>
+      {% include tags.html %}
     </article>
   </li>
   {% endfor %}
