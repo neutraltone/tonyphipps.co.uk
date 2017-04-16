@@ -29,6 +29,7 @@
     width: $logo-size;
     height: $logo-size;
     backface-visibility: hidden;
+    will-change: transform;
 
     &--back {
       position: absolute;
