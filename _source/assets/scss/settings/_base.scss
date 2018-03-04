@@ -16,7 +16,7 @@ $base-spacing-unit: 1rem;
 $base-gutter: $base-spacing-unit;
 $base-container-width: 36rem;
 $base-container-gutter: $base-spacing-unit;
-$base-font: 'Europa', 'Quicksand', 'Helvetica Neue', Helvetica, Arial;
+$base-font: 'Europa', 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $base-anim-duration: 300ms;
 $base-anim-easing: cubic-bezier(0.16, 0.68, 0.43, 0.99);
 $base-anim-easing-alt: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -42,4 +42,4 @@ $logo-size: 6.5em;
  */
 
 $font-primary: $base-font;
-$font-secondary: 'Europa', 'Quicksand', 'Helvetica Neue', Helvetica, Arial;
+$font-secondary: 'Europa', 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;

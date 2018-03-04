@@ -25,10 +25,10 @@
 
   &__img {
     display: block;
+    backface-visibility: hidden;
     transition: transform double($base-anim-duration) $base-anim-easing;
     width: $logo-size;
     height: $logo-size;
-    backface-visibility: hidden;
     will-change: transform;
 
     &--back {

@@ -31,10 +31,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    animation: rotateplane 1.2s infinite ease-in-out;
     margin: -15px 0 0 -15px;
     background-color: color(text, light);
     width: 30px;
     height: 30px;
+    animation: rotateplane 1.2s infinite ease-in-out;
   }
 }

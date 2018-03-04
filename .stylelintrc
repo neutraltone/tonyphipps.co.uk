@@ -10,6 +10,7 @@
   "ignoreFiles": "src/scss/generic/_normalize.scss",
   "rules": {
     "at-rule-no-unknown": null,
+    "font-family-no-missing-generic-family-keyword": null,
     "max-empty-lines": 3,
     "value-list-max-empty-lines": 1
   }

@@ -20,9 +20,9 @@ $font-size--thumb: (($base-font-size / 3) * 2);
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
 }
 
 html,
@@ -45,10 +45,11 @@ body {
   overflow: hidden;
   overflow-y: scroll;
   color: color(text, dark);
-  font: 400 #{($base-font-size/$base-font-size)*1em}/#{$base-line-height/$base-font-size} $font-primary;
+  font: 400 #{($base-font-size/$base-font-size)*1em}/#{$base-line-height/$base-font-size};
+  font-family: $font-primary;
 
   @include av-mq(thumb) {
-    font-size: calc(100% / 1.5)
+    font-size: calc(100% / 1.5);
   }
 }
 

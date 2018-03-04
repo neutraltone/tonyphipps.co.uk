@@ -10,7 +10,8 @@
  * node_modules imports
  */
 
+@import 'avalanche';
 @import 'normalize';
+
 @include normalize();
 
-@import "avalanche";

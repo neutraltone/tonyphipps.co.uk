@@ -37,15 +37,15 @@
   &__tag {
     display: inline-block;
 
-    &:not(:last-child):not(:nth-last-child(2)) {
-      &:after {
-        content: ", ";
+    &:nth-last-child(2) {
+      &::after {
+        content: " & ";
       }
     }
 
-    &:nth-last-child(2) {
-      &:after {
-        content: " & ";
+    &:not(:last-child):not(:nth-last-child(2)) {
+      &::after {
+        content: ", ";
       }
     }
   }
