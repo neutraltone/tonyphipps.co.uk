@@ -1,31 +1,30 @@
 /**
  * Gulp Packages
  * =============
- * Import our gulp packages.
+ * const our gulp packages.
  */
 
-import gulp from 'gulp';
-import babel from 'gulp-babel';
-import browserSync from 'browser-sync';
-import cheerio from 'gulp-cheerio';
-import concat from 'gulp-concat';
-import eslint from 'gulp-eslint';
-import header from 'gulp-header';
-import imagemin from 'gulp-imagemin';
-import modernizr from 'gulp-modernizr';
-import path from 'path';
-import plumber from 'gulp-plumber';
-import pngquant from 'imagemin-pngquant';
-import rename from 'gulp-rename';
-import runSequence from 'gulp-run-sequence';
-import svgmin from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
-import uglify from 'gulp-uglify';
-import gulpStylelint from 'gulp-stylelint';
-import autoprefixer from 'gulp-autoprefixer';
-import sass from 'gulp-sass';
-import sourcemaps from 'gulp-sourcemaps';
-import { spawn } from 'child_process';
+const gulp = require('gulp');
+const babel = require('gulp-babel');
+const browserSync = require('browser-sync');
+const cheerio = require('gulp-cheerio');
+const concat = require('gulp-concat');
+const eslint = require('gulp-eslint');
+const imagemin = require('gulp-imagemin');
+const modernizr = require('gulp-modernizr');
+const path = require('path');
+const plumber = require('gulp-plumber');
+const pngquant = require('imagemin-pngquant');
+const rename = require('gulp-rename');
+const runSequence = require('gulp-run-sequence');
+const svgmin = require('gulp-svgmin');
+const svgstore = require('gulp-svgstore');
+const uglify = require('gulp-uglify');
+const gulpStylelint = require('gulp-stylelint');
+const autoprefixer = require('gulp-autoprefixer');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const { spawn } = require('child_process');
 
 
 /**
@@ -34,28 +33,8 @@ import { spawn } from 'child_process';
  * Constants used throughout this boilerplate.
  */
 
-import pkg from './package.json';
-import options from './gulp-options.json';
-
-
-/**
- * Banner Template
- * ---------------
- * Define our banner template which is injected into
- * the top of our minfied Stylesheet and JavaScript.
- */
-
-const banner = [
-  `/*!
-    * ${pkg.name}
-    * ${pkg.title}
-    * ${pkg.url}
-    * @author ${pkg.author}
-    * @version ${pkg.version}
-    * Copyright ${new Date().getFullYear()}. ${pkg.license} licensed.
-    */`,
-  '\n',
-].join('');
+const pkg = require('./package.json');
+const options = require('./gulp-options.json');
 
 
 /**
@@ -132,9 +111,6 @@ gulp.task('sass', () => {
       browsers: options.support.browser,
       cascade: false,
     }))
-    .pipe(header(banner, {
-      pkg,
-    }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(options.dest.css))
@@ -179,14 +155,9 @@ gulp.task('js', () => {
   gulp.src([options.src.vendor, options.src.js])
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(babel({
-      presets: ['es2015'],
-    }))
+    .pipe(babel())
     .pipe(concat('scripts.js'))
     .pipe(uglify())
-    .pipe(header(banner, {
-      pkg,
-    }))
     .pipe(rename({
       suffix: '.min',
     }))
