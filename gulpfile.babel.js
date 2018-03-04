@@ -4,28 +4,27 @@
  * const our gulp packages.
  */
 
-const gulp = require('gulp');
-const babel = require('gulp-babel');
-const browserSync = require('browser-sync');
-const cheerio = require('gulp-cheerio');
-const concat = require('gulp-concat');
-const eslint = require('gulp-eslint');
-const imagemin = require('gulp-imagemin');
-const modernizr = require('gulp-modernizr');
-const path = require('path');
-const plumber = require('gulp-plumber');
-const pngquant = require('imagemin-pngquant');
-const rename = require('gulp-rename');
-const runSequence = require('gulp-run-sequence');
-const svgmin = require('gulp-svgmin');
-const svgstore = require('gulp-svgstore');
-const uglify = require('gulp-uglify');
-const gulpStylelint = require('gulp-stylelint');
-const autoprefixer = require('gulp-autoprefixer');
-const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
-const { spawn } = require('child_process');
-
+const gulp = require('gulp')
+const babel = require('gulp-babel')
+const browserSync = require('browser-sync')
+const cheerio = require('gulp-cheerio')
+const concat = require('gulp-concat')
+const eslint = require('gulp-eslint')
+const imagemin = require('gulp-imagemin')
+const modernizr = require('gulp-modernizr')
+const path = require('path')
+const plumber = require('gulp-plumber')
+const pngquant = require('imagemin-pngquant')
+const rename = require('gulp-rename')
+const runSequence = require('gulp-run-sequence')
+const svgmin = require('gulp-svgmin')
+const svgstore = require('gulp-svgstore')
+const uglify = require('gulp-uglify')
+const gulpStylelint = require('gulp-stylelint')
+const autoprefixer = require('gulp-autoprefixer')
+const sass = require('gulp-sass')
+const sourcemaps = require('gulp-sourcemaps')
+const { spawn } = require('child_process')
 
 /**
  * Constants
@@ -33,9 +32,7 @@ const { spawn } = require('child_process');
  * Constants used throughout this boilerplate.
  */
 
-const pkg = require('./package.json');
-const options = require('./gulp-options.json');
-
+const options = require('./gulp-options.json')
 
 /**
  * BrowserSync.io
@@ -53,19 +50,19 @@ gulp.task('serve', [
   'modernizr',
   'images',
   'svg-sprite',
-  'favicon',
+  'favicon'
 ], () => {
   browserSync.init({
-    server: options.dest.dist,
-  });
-  gulp.watch(options.src.scss, ['lint-sass', 'sass']);
-  gulp.watch(options.src.js, ['lint-js', 'js', 'modernizr']);
-  gulp.watch(options.src.img, ['images']);
-  gulp.watch(options.src.sprite, ['svg-sprite']);
+    server: options.dest.dist
+  })
+  gulp.watch(options.src.scss, ['lint-sass', 'sass'])
+  gulp.watch(options.src.js, ['lint-js', 'js', 'modernizr'])
+  gulp.watch(options.src.img, ['images'])
+  gulp.watch(options.src.sprite, ['svg-sprite'])
   gulp.watch([
     path.join(options.src.src, '*.html'),
     path.join(options.src.src, '**/*.html'),
-    path.join(options.src.src, '**/*.md'),
+    path.join(options.src.src, '**/*.md')
   ], () => {
     runSequence('jekyll',
       [
@@ -76,13 +73,12 @@ gulp.task('serve', [
         'js',
         'modernizr',
         'images',
-        'svg-sprite',
+        'svg-sprite'
       ],
       browserSync.reload
-    );
-  });
-});
-
+    )
+  })
+})
 
 /**
  * Sass
@@ -102,24 +98,23 @@ gulp.task('sass', () => {
     .pipe(sass({
       includePaths: [
         options.dep.normalize,
-        options.dep.avalanche,
+        options.dep.avalanche
       ],
       outputStyle: 'compressed',
-      errLogToConsole: true,
+      errLogToConsole: true
     }))
     .pipe(autoprefixer({
       browsers: options.support.browser,
-      cascade: false,
+      cascade: false
     }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(options.dest.css))
     .pipe(browserSync.reload({
       stream: true,
-      once: true,
-    }));
-});
-
+      once: true
+    }))
+})
 
 /**
  * Lint Sass
@@ -132,13 +127,12 @@ gulp.task('lint-sass', () => {
     .pipe(gulpStylelint({
       reporters: [{
         formatter: 'string',
-        console: true,
+        console: true
       }],
       failAfterError: false,
-      syntax: 'scss',
-    }));
-});
-
+      syntax: 'scss'
+    }))
+})
 
 /*
  * JavaScript
@@ -159,15 +153,15 @@ gulp.task('js', () => {
     .pipe(concat('scripts.js'))
     .pipe(uglify())
     .pipe(rename({
-      suffix: '.min',
+      suffix: '.min'
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(options.dest.js))
     .pipe(browserSync.reload({
       stream: true,
-      once: true,
-    }));
-});
+      once: true
+    }))
+})
 
 
 /**
@@ -185,9 +179,9 @@ gulp.task('modernizr', () => {
     .pipe(gulp.dest(options.dest.vendor))
     .pipe(browserSync.reload({
       stream: true,
-      once: true,
-    }));
-});
+      once: true
+    }))
+})
 
 
 /**
@@ -199,8 +193,8 @@ gulp.task('modernizr', () => {
 gulp.task('lint-js', () => {
   gulp.src(options.src.js)
     .pipe(eslint())
-    .pipe(eslint.format());
-});
+    .pipe(eslint.format())
+})
 
 
 /**
@@ -216,13 +210,13 @@ gulp.task('images', () => {
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{
-        removeViewBox: false,
+        removeViewBox: false
       }],
-      use: pngquant(),
+      use: pngquant()
     }))
     .pipe(gulp.dest(options.dest.img))
-    .pipe(browserSync.stream());
-});
+    .pipe(browserSync.stream())
+})
 
 
 /**
@@ -240,8 +234,8 @@ gulp.task('svg-sprite', () => {
     .pipe(svgstore())
     .pipe(cheerio($ => $('svg').attr('style', 'display:none')))
     .pipe(gulp.dest(options.dest.img))
-    .pipe(browserSync.stream());
-});
+    .pipe(browserSync.stream())
+})
 
 /**
  * Favicon
@@ -250,8 +244,8 @@ gulp.task('svg-sprite', () => {
 
 gulp.task('favicon', () => {
   gulp.src(options.src.favicon)
-    .pipe(gulp.dest(options.dest.img));
-});
+    .pipe(gulp.dest(options.dest.img))
+})
 
 
 
@@ -263,19 +257,19 @@ gulp.task('favicon', () => {
 
 gulp.task('jekyll', (gulpCallBack) => {
   const jekyll = spawn('jekyll', ['build'], {
-    stdio: 'inherit',
-  });
+    stdio: 'inherit'
+  })
 
   jekyll.on('exit', (code) => {
-    gulpCallBack(code === 0 ? null : `ERROR: Jekyll process exited with code: ${code}`);
-  });
-});
+    gulpCallBack(code === 0 ? null : `ERROR: Jekyll process exited with code: ${code}`)
+  })
+})
 
 
 // Default Task
 gulp.task('default', () => {
-  runSequence('jekyll', 'serve');
-});
+  runSequence('jekyll', 'serve')
+})
 
 // Build Task
 gulp.task('build', () => {
@@ -288,6 +282,6 @@ gulp.task('build', () => {
     'modernizr',
     'images',
     'svg-sprite',
-    'favicon',
-  ]);
-});
+    'favicon'
+  ])
+})
