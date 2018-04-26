@@ -20,9 +20,12 @@
 .nav {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin: 2em 0;
   width: 100%;
+
+  @include av-mq(thumb) {
+    justify-content: center;
+  }
 
   &__list {
     @extend %list-bare;
@@ -34,6 +37,14 @@
 
   &__item {
     padding: 0 0.5em;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
 
     a {
       border: 0;

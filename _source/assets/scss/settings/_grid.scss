@@ -26,11 +26,11 @@ $av-widths: (
 // Breakpoints
 $av-breakpoints: (
   "thumb":            "screen and (max-width: 499px)",
-  "handheld":         "screen and (min-width: 500px) and (max-width: 600px)",
+  "handheld":         "screen and (min-width: 500px) and (max-width: 800px)",
   "handheld-and-up":  "screen and (min-width: 500px)",
-  "pocket":           "screen and (max-width: 600px)",
-  "lap":              "screen and (min-width: 601px) and (max-width: 1024px)",
-  "lap-and-up":       "screen and (min-width: 601px)",
+  "pocket":           "screen and (max-width: 800px)",
+  "lap":              "screen and (min-width: 801px) and (max-width: 1024px)",
+  "lap-and-up":       "screen and (min-width: 801px)",
   "portable":         "screen and (max-width: 1024px)",
   "desk":             "screen and (min-width: 1025px)",
   "widescreen":       "screen and (min-width: 1160px)",

@@ -8,7 +8,7 @@ layout: default
       <img class="logo__img" src="/assets/img/logo.svg" alt="Tony Phipps - Front-end developer">
     </a>
     <h1>Front-end Developer</h1>
-    <p>Hello. I am Tony, a Front-end Developer from the United Kingdom. Check out my <a href="/portfolio">portfolio</a> for an insight into my work or perhaps you'd rather peruse the somewhat sporadic selection of topics in my <a href="/blog">blog</a>. If you would like to work with me, feel free to <a href="/contact">get in touch</a>.</p>
+    <p>Hello. I am Tony, a Front-end Developer from the United Kingdom. Check out my <a href="/projects">projects</a> for an insight into my work or perhaps you'd rather peruse the somewhat sporadic selection of topics in my <a href="/blog">blog</a>. If you would like to work with me, feel free to <a href="/contact">get in touch</a>.</p>
     <ul class="social">
       {% for network in site.social %}
       <li class="social__item">
@@ -23,29 +23,3 @@ layout: default
     </ul>
   </div>
 </main>
-
-<aside class="modal  js-modal">
-  <div class="contact  js-contact">
-    <h2 class="contact__title">Hi there!</h2>
-    <p>I'm always looking for new opportunities and people to work with. If this is you, please feel free to get in touch.</p>
-    <form class="contact__form  form" action="mailer.php">
-      <div class="form__field  paragraph">
-        <label class="form__label  paragraph" for="name">What's your name?</label>
-        <input class="input  js-tabbable" tabindex="-1" type="text" id="name" name="name" placeholder="Will Hunting" required>
-      </div>
-      <div class="form__field  paragraph">
-        <label class="form__label" for="email">What's your email address?</label>
-        <input class="input  js-tabbable" tabindex="-1" type="text" id="email" name="email" placeholder="will@hunting.co.uk" required>
-      </div>
-      <div class="form__field  paragraph">
-        <label class="form__label" for="message">What's your enquiry?</label>
-        <textarea class="textarea  js-tabbable" tabindex="-1" id="message" name="message" placeholder="I'm writing about a..." required></textarea>
-      </div>
-      <div class="form__messages  paragraph"></div>
-      <div class="form__field">
-        <button class="btn  btn--bare  js-modal-close  paragraph" tabindex="-1">&lt; Go back</button>
-        <button class="btn  btn--primary  js-submit-btn  js-tabbable  paragraph" tabindex="-1">Send</button>
-      </div>
-    </form>
-  </div>
-</aside>

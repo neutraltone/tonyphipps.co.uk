@@ -33,14 +33,14 @@
     "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.2",
     "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.17.0",
+    "browser-sync": "^2.23.7",
     "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
@@ -49,19 +49,19 @@
     "gulp-eslint": "^4.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-minify-html": "^1.0.6",
-    "gulp-modernizr": "^2.0.0",
+    "gulp-modernizr": "^2.0.1",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-run-sequence": "^0.3.2",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.2.0",
     "gulp-stylelint": "^7.0.0",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.0.0",
     "gulp-uglify": "^3.0.0",
-    "imagemin-pngquant": "^5.0.0",
+    "imagemin-pngquant": "^5.1.0",
     "stylelint-config-concentric": "^2.0.0",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-scss": "^2.4.0"
+    "stylelint-scss": "^3.0.1"
   }
 }

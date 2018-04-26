@@ -47,10 +47,6 @@ body {
   color: color(text, dark);
   font: 400 #{($base-font-size/$base-font-size)*1em}/#{$base-line-height/$base-font-size};
   font-family: $font-primary;
-
-  @include av-mq(thumb) {
-    font-size: calc(100% / 1.5);
-  }
 }
 
 
